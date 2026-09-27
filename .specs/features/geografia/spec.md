@@ -25,3 +25,6 @@ HTML autônomo para alunos do 3º ano, 9 anos, preparando a prova de 2/10 indica
 
 ## Dimensões aplicáveis
 Entrada: limite do nome e escape; estado: rodada/rascunhos, idempotência XP e revisão; persistência: erro e perfil isolado; exclusão: duas etapas. Concorrência: uma aba ativa de estudo por vez, sem mesclar edições simultâneas (guia). Auth, rede, pagamentos, telemetria e rate limits N/A: produto local sem servidor.
+
+## Resultado final
+GEO-01 a GEO-08 verificados. Revisão independente PASS após correção de corrupção estrutural em 3ce97de; evidências em validation.md. Testes principais, atividades completas e regressões de armazenamento passaram.

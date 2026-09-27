@@ -1,5 +1,38 @@
 # Validação independente — Expedição Geografia
 
+## Veredito final: PASS — correção verificada em 3ce97de
+
+Reverificação independente em 2026-09-27, ciclo 1 de correção. Diff complementar: `61a2ad5..3ce97de`. **GEO-01…GEO-08 verificados; nenhuma lacuna funcional pendente identificada.** A falha inicial de GEO-07 foi corrigida. A análise inicial permanece abaixo como histórico, com linhas da versão anterior.
+
+### Evidência da correção GEO-07
+
+- `quiz-geografia-2026.10.02.html:1434` introduz `validSavedState`. :1451 exige IDs únicos, conhecidos e não vazios; :1452 limita o índice e verifica metadados; :1454 exige mapas; :1455–1464 verifica valores, correção das respostas, ordens e respostas anteriores/conclusão. :1471–1475 verifica os mapas persistidos do perfil.
+- `quiz-geografia-2026.10.02.html:1479` só atribui `store=candidate` depois de `validSavedState(candidate)`. Um erro mantém o estado inicial em memória e chama o aviso; :1481 impede qualquer gravação quando `storageOK` é falso. Isso preserva o raw inválido enquanto permite jogar numa sessão temporária.
+- `tests/geografia-storage.mjs:11` inclui exatamente a sessão inválida descoberta pelo Verifier. :12–16 cobrem índice inválido, mapa do tipo array, resposta nula e ID de prêmio inválido. Para cada uma das seis corrupções: :22 exige mensagem `/não ficará salvo/`; :23 exige ausência de rodada retomável; :25 confirma novo perfil; :28 exige `'10'` XP após uma resposta real; :29 exige igualdade estrita entre storage e raw original; :30 exige `errors === []`.
+- `tests/geografia-storage.mjs:34–40` verifica o caminho válido: três rascunhos distintos (multi, completar, ordem) sobrevivem ao reload sem aviso e a sessão retomada é `deepEqual` à anterior. O gate principal também retoma resposta já conferida e perfis normais, evitando que a validação mais forte quebre o uso habitual.
+
+### Gates finais executados pelo Verifier
+
+Com Playwright local e Chrome temporário isolado:
+
+| Comando | Resultado independente |
+|---|---|
+| `CHECK_HOME=1 PLAYWRIGHT_MODULE=… node tests/geografia.mjs` | Exit 0, **249 verificações passaram**. |
+| `PLAYWRIGHT_MODULE=… node tests/geografia-storage.mjs` | Exit 0, **seis corrupções + três rascunhos válidos passaram**. |
+| `git diff --check` | Exit 0. |
+
+A suite de atividades passou independentemente na primeira rodada; a nova execução após a correção foi relatada pelo autor, não é contabilizada aqui como nova execução do Verifier. Os testes passaram de dois para três scripts; nenhum teste anterior foi removido ou enfraquecido. A pequena mudança CSS em :9 remove o contorno do container `main` focado programaticamente; a regra de foco visível dos controles continua presente.
+
+### Sensor complementar
+
+Cópia exclusiva em `/tmp/geografia-verifier-storage-guard`: substituir em :1479 `if(!validSavedState(candidate))` por `if(false)`, deixando entrar o estado inválido. Executar `tests/geografia-storage.mjs` com `QUIZ_ROOT` da cópia resulta em **exit 1, mutante morto**, na asserção :22: aviso esperado `/não ficará salvo/`, observado texto vazio. Cópia mutada descartada. Total da validação: **4 mutações comportamentais, 4 mortas, 0 sobreviventes**.
+
+A correção está limitada ao defeito e à regressão pertinente; nenhum framework novo. GEO-07 muda de **necessita correção** para **verificado**. Mantêm-se os limites honestos da primeira análise: não houve UAT com criança nem certificação por leitor de tela. A lição fundamentada da falha inicial permanece registrada ao final deste relatório; não surgiu sinal adicional nesta reverificação.
+
+---
+
+## Histórico da validação inicial
+
 Data: 2026-09-27. Verifier independente (autor ≠ verificador). Referência: `spec.md` e `fontes.md` desta pasta. Superfície: `3766ff8..61a2ad5`, HTML novo, home e dois scripts de testes. Implementação e testes reais não foram alterados pelo Verifier.
 
 **Veredito inicial: FAIL — uma lacuna GEO-07 de recuperação de dados estruturalmente corrompidos.** Os dois gates passam; três mutações foram detectadas. Os demais fluxos e conteúdo examinados estão conformes.
