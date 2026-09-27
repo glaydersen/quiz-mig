@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f6ee"><meta name="description" content="Expedição Geografia: paisagens, trabalho, solo e água. Missões, jogos e descobertas para o 3º ano.">
+<title>Expedição Geografia · Clube do Miguel</title>
+<style>
+:root{color-scheme:light;--ink:#292d3d;--muted:#626776;--paper:#f8f6ee;--purple:#6243ac;--green:#216850;--line:#e3dfd3;--lilac:#eee5fc;--mint:#def2e6;--peach:#ffe5d6;--yellow:#fff1c1;--sky:#dff0fa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 ui-rounded,'Avenir Next','Trebuchet MS',sans-serif}button,input,textarea,select{font:inherit}button,a,input,textarea{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:default}a{color:var(--purple)}button,a,input,textarea,select{outline-offset:4px} :focus-visible{outline:3px solid #a55413}button{border:1px solid var(--line);border-radius:12px;background:#fffefa;color:var(--ink);min-height:46px;padding:10px 18px;font-weight:750}button:hover:not(:disabled){border-color:var(--purple);background:#f5f0fc}button.primary,.primary{background:var(--purple);color:white;border-color:var(--purple)}button.primary:hover:not(:disabled){background:#513593;color:white}button:disabled{opacity:.65}.plain{background:transparent;border-color:transparent}.danger{color:#973b28}.small{font-size:13px}.muted{color:var(--muted)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}.skip{position:absolute;top:-100px;background:white;padding:12px;z-index:5}.skip:focus{top:0}header{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:19px 0}.brand{text-decoration:none;font-weight:850;font-size:18px;display:flex;gap:10px;align-items:center;color:var(--ink)}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:12px;background:#ffcb66;color:#59412b;font-size:26px;transform:rotate(-8deg)}.header-actions,.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.between{justify-content:space-between}.profile{background:white;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:13px;display:flex;gap:12px;max-width:100%;align-items:center}.profile-name{max-width:170px;overflow-wrap:anywhere}.xp{font-weight:850;color:#725016;white-space:nowrap}main{padding:32px 0 55px;min-height:70vh}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(32px,4.5vw,52px);line-height:1.14;letter-spacing:-1.8px;margin-bottom:17px}h2{font-size:25px;line-height:1.25;letter-spacing:-.6px}h3{font-size:20px;line-height:1.35;margin-bottom:10px}p{margin-bottom:16px}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:850;text-transform:uppercase;color:var(--green)}.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:35px;align-items:center;padding:15px 0 32px}.hero p{max-width:560px;font-size:17px}.hero .art{width:min(100%,350px);justify-self:center}.welcome{max-width:890px;margin:10px auto}.welcome-form{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}input[type=text],textarea{border:1px solid #bdb7ca;border-radius:12px;padding:12px 14px;color:var(--ink);background:#fff;max-width:100%;width:100%}.welcome-form input{flex:1;min-width:160px}.label{display:block;font-weight:800;margin-bottom:6px}textarea{min-height:140px;resize:vertical}label{line-height:1.5}.tag{display:inline-block;padding:4px 10px;border-radius:18px;background:var(--lilac);color:#614187;font-size:12px;font-weight:800}.tag.green{background:var(--mint);color:var(--green)}.tag.gold{background:var(--yellow);color:#725016}.panel{background:#fffefa;border:1px solid var(--line);border-radius:22px;padding:30px;margin-bottom:22px}.tinted{background:var(--lilac);border-color:#ddcfef}.note{border-radius:14px;background:#edf4ed;padding:17px 20px;color:#305240;margin-block:16px}.note.warm{background:#fff0d4;color:#735022}.note p:last-child{margin:0}.progress-line{display:flex;justify-content:space-between;gap:15px;font-size:13px;margin-bottom:8px}.track{height:10px;border-radius:10px;background:#e9e4d9;overflow:hidden}.track>span{display:block;height:100%;background:var(--green);border-radius:10px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:30px 0 17px}.section-head h2{margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.mission{display:flex;flex-direction:column;align-items:stretch;text-align:left;background:#fffefa;border:1px solid var(--line);border-radius:20px;padding:23px;min-width:0}.mission .icon{display:grid;place-items:center;width:58px;height:58px;font-size:31px;border-radius:17px;background:var(--tint);margin-bottom:18px}.mission p{font-size:14px;color:var(--muted);margin-bottom:22px}.mission h3{margin-top:10px}.mission-bottom{margin-top:auto}.mission button{width:100%;margin-top:15px}.mission .track{height:6px}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.tool{display:flex;align-items:flex-start;text-align:left;gap:12px;padding:20px;border-radius:18px}.tool b{display:block;font-size:16px}.tool small{display:block;font-size:12px;font-weight:500;color:var(--muted);margin-top:4px}.tool-icon{font-size:26px}.back{margin-bottom:22px}.lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:24px 0}.fact{background:var(--paper);border-radius:16px;padding:22px}.fact p{margin:0;font-size:15px}.fact h3{font-size:18px}.narrow{max-width:830px;margin:auto}.question-title{font-size:clamp(23px,3vw,30px);line-height:1.45;letter-spacing:-.5px;margin:26px 0 22px}.choices{display:grid;gap:12px}.choice{text-align:left;display:flex;gap:12px;align-items:center;padding:15px 18px;line-height:1.45;min-height:58px;font-weight:650}.choice.selected{border:2px solid var(--purple);padding:14px 17px;background:var(--lilac)}.choice .marker{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:9px;background:#eeeae1;font-size:13px}.choice.selected .marker{background:var(--purple);color:white}.answer-actions{margin-top:23px}.feedback{border-radius:16px;padding:22px;margin-top:22px;background:var(--mint);border:1px solid #a3cdb5}.feedback.retry{background:#fff0d4;border-color:#e1bf79}.feedback h3{margin-bottom:7px}.feedback p{margin-bottom:12px}.feedback .source{font-size:12px;color:#5b605e}.order-list{display:grid;gap:10px;padding:0;list-style:none}.order-item{display:flex;align-items:center;gap:12px;padding:12px;background:var(--paper);border-radius:12px}.order-item .order-label{flex:1;line-height:1.4}.order-item button{padding:6px 12px;min-width:42px}.puzzle-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,1fr);gap:28px;align-items:start}.letter-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px;max-width:480px;width:100%}.cell{padding:0;min-height:0;aspect-ratio:1;font-size:clamp(12px,2.8vw,19px);border-radius:5px;font-weight:800}.cell.found{background:#c6e7d2;color:#1d543b;border-color:#72a88c}.cell.start{background:#f9d878;border-color:#745112}.words{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.word{background:#eeeae1;border-radius:8px;padding:5px 9px;font-size:13px}.word.done{background:var(--mint);text-decoration:line-through}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:23px}.tabs button{font-size:13px}.tabs .active{background:var(--purple);color:white}.cross-grid{display:grid;gap:2px;background:#f0ece2;padding:8px;border-radius:12px;width:100%;max-width:500px}.cross-cell{background:#fffefa;border:1px solid #c5bed0;aspect-ratio:1;min-width:0;display:grid;place-items:center;position:relative;font-size:clamp(11px,2.5vw,21px);font-weight:800;line-height:1}.cross-cell.blank{visibility:hidden}.cross-cell small{position:absolute;top:2px;left:2px;font-size:8px;color:#65567a}.cross-cell.conflict{background:#ffe0cc}.clue{margin-bottom:16px}.clue label{display:block;font-size:14px;margin-bottom:5px}.clue input{padding:8px 10px;text-transform:uppercase;letter-spacing:2px}.clue .answer-note{font-size:12px;margin-top:4px}.result-score{font-size:60px;font-weight:850;color:var(--purple);letter-spacing:-3px;line-height:1.2}.results-list{display:grid;gap:12px}.results-list article{padding:20px;border:1px solid var(--line);border-radius:15px}.results-list p{margin-bottom:8px}.diagram{display:block;width:100%;max-height:300px;margin:16px auto;border-radius:16px;background:#f4f1e8}.chart{background:var(--paper);border-radius:16px;padding:20px;margin:20px 0}.bar-row{margin-bottom:13px;font-size:13px}.bar-row span{display:block;background:#e6e1d5;height:19px;border-radius:5px;margin-top:4px}.bar-row i{display:block;height:100%;background:#6eae8a;border-radius:5px}.checklist{padding-left:22px}.checklist li{margin-block:7px}.storage-notice{margin:15px auto 0;background:#fff0d4;color:#754b14;border-radius:12px;padding:12px 18px;font-size:14px}.empty{padding:25px 0}.footer{border-top:1px solid var(--line);padding:20px 0 30px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#292d3d;color:white;padding:12px 22px;border-radius:30px;z-index:6;box-shadow:0 5px 20px #0002;text-align:center;max-width:90vw;pointer-events:none}.hidden,[hidden]{display:none!important}.profile-options{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.source-list{font-size:14px}.reflect-prompt{font-size:18px;font-weight:700}.note-label{display:block;font-weight:800;color:var(--purple);margin-bottom:8px}details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-block:15px}summary{cursor:pointer;font-weight:800}details p{margin-top:12px}.save-state{font-size:12px;color:var(--muted)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tools{grid-template-columns:repeat(2,minmax(0,1fr))}header{align-items:flex-start;flex-wrap:wrap}.hero{gap:20px}.puzzle-layout{grid-template-columns:1fr}.puzzle-layout>div{min-width:0}.letter-grid{margin:auto}.cross-grid{margin:auto}}
+@media(max-width:580px){.wrap{width:calc(100% - 28px)}header{padding:15px 0;gap:12px}.header-actions{gap:5px;width:100%}.header-actions button{padding:8px 10px;font-size:12px}.profile{flex:1 0 100%;justify-content:space-between}.profile-name{max-width:230px}.brand{font-size:16px}.hero{grid-template-columns:1fr;gap:15px;padding-top:0}.hero .art{max-width:235px;grid-row:2}.hero h1{font-size:37px}.hero p{font-size:16px}.welcome .art{max-width:200px}.panel{padding:21px 18px;border-radius:18px}.grid,.tools,.lesson-grid{grid-template-columns:1fr}.mission{padding:22px}.mission .icon{width:48px;height:48px;font-size:26px}.section-head{align-items:flex-start}.section-head h2{font-size:23px}.section-head .tag{font-size:10px}.question-title{font-size:23px}.choice{font-size:15px;padding:14px 12px}.choice.selected{padding:13px 11px}.order-item{gap:7px;padding:10px;font-size:14px}.order-item button{padding:4px 8px;min-width:36px}.order-item .row{gap:4px}.tabs button{padding:8px 10px;font-size:12px}.cell{font-size:14px}.cross-cell small{font-size:7px}.footer{flex-direction:column;gap:5px}.narrow .row.between{align-items:flex-start}main{padding-top:23px}.progress-line{font-size:12px}.welcome-form button{width:100%}.results-list article{padding:17px}.puzzle-layout{gap:22px}}
+@media(prefers-reduced-motion:no-preference){.mission button,.tool{transition:transform .15s ease}.mission button:hover,.tool:hover{transform:translateY(-2px)}.toast{animation:appear .2s ease-out}@keyframes appear{from{opacity:0;bottom:10px}to{opacity:1;bottom:20px}}}
+@media print{header,.back,.header-actions,.footer,button,.toast{display:none}.panel{break-inside:avoid}body{background:white}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="wrap"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span> Clube do Miguel</a><div id="header-actions" class="header-actions"></div></header>
+<div id="storage-notice" class="wrap storage-notice" role="status" hidden></div>
+<main id="main" class="wrap" tabindex="-1"></main>
+<noscript><div class="wrap panel">Para jogar e guardar seu progresso, ative o JavaScript do navegador. Você ainda pode estudar as páginas 82–91, 93–103 e 164–169 do livro.</div></noscript>
+<footer class="wrap footer"><span>Expedição Geografia · 3º ano · Prova de 2/10</span><span>Descobrir, explicar e tentar de novo. No seu ritmo.</span></footer>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script id="geo-content" type="application/json">
+{
+  "missions": [
+    {
+      "title": "Paisagens em transformação",
+      "icon": "🏙️",
+      "color": "lilac",
+      "pages": "82–85, 90 e 164",
+      "desc": "Vista de detetive: o que mudou nesse lugar?",
+      "facts": [
+        [
+          "Trabalho deixa marcas",
+          "Ao construir casas, abrir ruas ou plantar, as pessoas transformam a paisagem para atender necessidades."
+        ],
+        [
+          "Cidade tem muitos jeitos",
+          "Lojas, serviços, indústrias e moradias fazem parte do espaço urbano. Nem toda cidade tem prédios altos! Observe vários elementos juntos."
+        ],
+        [
+          "Olhar de cima",
+          "Na visão vertical, olhamos de cima para baixo. Um mapa usa símbolos e uma legenda para representar lugares. As cores do desenho não precisam ser as cores reais."
+        ]
+      ],
+      "reflect": "Explique uma mudança na paisagem perto da sua casa. Que trabalho foi necessário para ela acontecer?",
+      "questions": [
+        {
+          "id": "m1-1",
+          "type": "single",
+          "prompt": "Uma rua ganhou uma escola e uma praça. Como essa paisagem foi transformada?",
+          "answer": "Pelo trabalho das pessoas",
+          "explain": "Para construir uma escola e cuidar de uma praça, várias pessoas trabalham. Esse trabalho modifica os elementos da paisagem.",
+          "pages": "82–83",
+          "options": [
+            "Pelo trabalho das pessoas",
+            "Pela mudança do dia para a noite",
+            "Somente pelo vento"
+          ]
+        },
+        {
+          "id": "m1-2",
+          "type": "single",
+          "prompt": "Qual conjunto é mais comum em uma paisagem urbana?",
+          "answer": "Construções próximas e muitos serviços",
+          "explain": "Nas cidades, muitas construções ficam próximas e há comércio e serviços. Uma árvore na rua não transforma a cidade em espaço rural.",
+          "pages": "84",
+          "options": [
+            "Construções próximas e muitos serviços",
+            "Apenas árvores e rios",
+            "Grandes pastagens com poucas construções"
+          ]
+        },
+        {
+          "id": "m1-3",
+          "type": "single",
+          "prompt": "Observe o antes e o depois. O que mudou?",
+          "answer": "Há mais construções e menos árvores",
+          "explain": "Compare os mesmos pontos das duas cenas: novas construções ocuparam parte do espaço antes coberto por árvores.",
+          "pages": "82–83 e 164",
+          "options": [
+            "Há mais construções e menos árvores",
+            "O rio mudou de lugar",
+            "Todas as construções desapareceram"
+          ],
+          "visual": "before"
+        },
+        {
+          "id": "m1-4",
+          "type": "single",
+          "prompt": "Uma cidade tem casas baixas, árvores e uma rua tranquila. Ela deixa de ser urbana?",
+          "answer": "Não. As paisagens urbanas podem ser diferentes",
+          "explain": "As cidades têm paisagens variadas, como ruas residenciais e áreas comerciais. Prédios altos não são uma regra para todo lugar urbano.",
+          "pages": "84 e 90",
+          "options": [
+            "Não. As paisagens urbanas podem ser diferentes",
+            "Sim. Toda cidade precisa de arranha-céus",
+            "Sim. Árvores só existem no campo"
+          ]
+        },
+        {
+          "id": "m1-5",
+          "type": "single",
+          "prompt": "No mapa do Bairro Curioso, o símbolo de livro indica qual lugar?",
+          "answer": "Escola",
+          "explain": "A legenda é a chave do mapa: ela conta o significado dos símbolos. Neste mapa, o livro representa a escola.",
+          "pages": "85",
+          "options": [
+            "Escola",
+            "Mercado",
+            "Rio"
+          ],
+          "visual": "map"
+        },
+        {
+          "id": "m1-6",
+          "type": "single",
+          "prompt": "Qual elemento deste mapa foi construído pelas pessoas?",
+          "answer": "Ponte",
+          "explain": "A ponte é uma construção humana. Rio e morro são elementos naturais, embora também possam sofrer alterações.",
+          "pages": "85",
+          "options": [
+            "Ponte",
+            "Rio",
+            "Morro"
+          ],
+          "visual": "map"
+        },
+        {
+          "id": "m1-7",
+          "type": "single",
+          "prompt": "Uma fotografia e um mapa podem representar o mesmo lugar.",
+          "answer": "Verdadeiro",
+          "explain": "A fotografia registra a paisagem; o mapa a representa com símbolos. São maneiras diferentes de mostrar um lugar.",
+          "pages": "85",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m1-8",
+          "type": "single",
+          "prompt": "Toda paisagem urbana é igual às outras.",
+          "answer": "Falso",
+          "explain": "Compare uma rua residencial com uma avenida de comércio: construções, circulação e atividades podem ser bem diferentes.",
+          "pages": "84 e 90",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m1-9",
+          "type": "multi",
+          "prompt": "Marque as DUAS ações humanas que transformam uma paisagem.",
+          "answer": [
+            "Construir uma ponte",
+            "Cultivar uma plantação"
+          ],
+          "explain": "Construção e cultivo são trabalhos que modificam o lugar. O pôr do Sol e a passagem de nuvens não são trabalhos humanos.",
+          "pages": "82–83",
+          "options": [
+            "Construir uma ponte",
+            "Cultivar uma plantação",
+            "O Sol se pôr",
+            "Uma nuvem passar"
+          ]
+        },
+        {
+          "id": "m1-10",
+          "type": "multi",
+          "prompt": "Marque os DOIS elementos naturais.",
+          "answer": [
+            "Rio",
+            "Morro"
+          ],
+          "explain": "Rio e morro fazem parte da natureza. Escola e ponte foram construídas pelas pessoas. Uma paisagem pode reunir os dois tipos.",
+          "pages": "85",
+          "options": [
+            "Rio",
+            "Morro",
+            "Escola",
+            "Ponte"
+          ]
+        },
+        {
+          "id": "m1-11",
+          "type": "fill",
+          "prompt": "Na visão vertical, olhamos de cima para _____.",
+          "answer": "baixo",
+          "explain": "A visão vertical mostra o lugar do alto, olhando para baixo. Ela ajuda a observar a posição dos elementos.",
+          "pages": "85"
+        },
+        {
+          "id": "m1-12",
+          "type": "order",
+          "prompt": "Organize o jeito de investigar uma mudança na paisagem.",
+          "answer": [
+            "Observar a imagem antiga",
+            "Observar a imagem mais recente",
+            "Comparar o que permaneceu e o que mudou"
+          ],
+          "explain": "Comparar o mesmo lugar em épocas diferentes revela mudanças e permanências. Nem tudo desaparece quando uma paisagem se transforma.",
+          "pages": "83 e 164"
+        }
+      ]
+    },
+    {
+      "title": "Do campo à sua mesa",
+      "icon": "🚜",
+      "color": "mint",
+      "pages": "86–89, 91 e 165–166",
+      "desc": "O iogurte fez uma viagem antes do seu lanche!",
+      "facts": [
+        [
+          "Cada trabalho tem um nome",
+          "Agricultura cultiva plantas; pecuária cria animais; extrativismo retira recursos da natureza. Na indústria, matérias-primas são transformadas em produtos."
+        ],
+        [
+          "Vender ou prestar um serviço?",
+          "Comércio compra e vende mercadorias. Transporte e atendimento de um professor são serviços. Campo e cidade trocam produtos e serviços."
+        ],
+        [
+          "Um lanche, muitos caminhos",
+          "O leite vem da criação de gado. A indústria o transforma em iogurte. O transporte leva o produto ao comércio, onde ele é vendido."
+        ],
+        [
+          "Recursos e cuidado",
+          "Sal e calcário são recursos minerais. Petróleo dá origem a combustíveis e plásticos. Extrair recursos pode retirar vegetação, alterar o solo e poluir a água."
+        ]
+      ],
+      "reflect": "Conte a viagem de um iogurte: de onde vem o leite, quem o transforma e como o produto chega até a loja?",
+      "questions": [
+        {
+          "id": "m2-1",
+          "type": "single",
+          "prompt": "Dona Cida planta e colhe alface. Qual atividade ela realiza?",
+          "answer": "Agricultura",
+          "explain": "Agricultura é o cultivo de plantas. Alface, mandioca e milho são exemplos de produtos agrícolas.",
+          "pages": "88 e 166",
+          "options": [
+            "Agricultura",
+            "Pecuária",
+            "Extrativismo mineral"
+          ]
+        },
+        {
+          "id": "m2-2",
+          "type": "single",
+          "prompt": "Seu João cria vacas para obter leite. Qual é a atividade?",
+          "answer": "Pecuária",
+          "explain": "Pecuária é a criação de animais. Os rebanhos precisam de água, alimento, abrigo e cuidados, que também transformam a paisagem.",
+          "pages": "88 e 166",
+          "options": [
+            "Pecuária",
+            "Comércio",
+            "Agricultura"
+          ]
+        },
+        {
+          "id": "m2-3",
+          "type": "single",
+          "prompt": "Uma fábrica transforma leite em iogurte. Qual atividade acontece ali?",
+          "answer": "Indústria",
+          "explain": "A indústria transforma matérias-primas em produtos. Vender o iogurte é outra etapa, a do comércio.",
+          "pages": "89 e 166",
+          "options": [
+            "Indústria",
+            "Comércio",
+            "Garimpo"
+          ]
+        },
+        {
+          "id": "m2-4",
+          "type": "single",
+          "prompt": "Uma loja vende o iogurte pronto. Qual atividade é essa?",
+          "answer": "Comércio",
+          "explain": "Comércio é a compra e venda de mercadorias. A loja vende o produto que passou por outras atividades antes de chegar lá.",
+          "pages": "89 e 166",
+          "options": [
+            "Comércio",
+            "Indústria",
+            "Pecuária"
+          ]
+        },
+        {
+          "id": "m2-5",
+          "type": "single",
+          "prompt": "O motorista leva os iogurtes da fábrica ao mercado. Ele realiza qual atividade?",
+          "answer": "Prestação de serviço de transporte",
+          "explain": "Transportar é prestar um serviço. A circulação de produtos e pessoas ajuda a ligar campo e cidade.",
+          "pages": "84 e 89",
+          "options": [
+            "Prestação de serviço de transporte",
+            "Cultivo de plantas",
+            "Extração de leite"
+          ]
+        },
+        {
+          "id": "m2-6",
+          "type": "single",
+          "prompt": "Qual par reúne recursos obtidos pelo extrativismo mineral?",
+          "answer": "Sal e calcário",
+          "explain": "Sal e calcário são recursos minerais. O calcário é usado, por exemplo, na construção. Alface é cultivada; leite vem da criação de animais.",
+          "pages": "87",
+          "options": [
+            "Sal e calcário",
+            "Alface e mandioca",
+            "Leite e ovos"
+          ]
+        },
+        {
+          "id": "m2-7",
+          "type": "single",
+          "prompt": "O petróleo pode ser usado para fabricar combustível e plástico.",
+          "answer": "Verdadeiro",
+          "explain": "O petróleo é um recurso energético e também matéria-prima de produtos como plásticos. O pote plástico do iogurte pode ter essa origem.",
+          "pages": "88–89",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m2-8",
+          "type": "single",
+          "prompt": "Quando uma máquina faz a colheita, não existe trabalho humano nessa atividade.",
+          "answer": "Falso",
+          "explain": "A colheita pode ser manual ou mecanizada. Planejar, operar e cuidar das máquinas também envolve trabalho humano.",
+          "pages": "91 e 165",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m2-9",
+          "type": "multi",
+          "prompt": "Marque as TRÊS atividades comuns no espaço rural.",
+          "answer": [
+            "Cultivar plantas",
+            "Criar animais",
+            "Extrair recursos naturais"
+          ],
+          "explain": "O campo reúne agricultura, pecuária e extrativismo. Não é um espaço formado apenas por plantações; há diferentes trabalhos e equipamentos.",
+          "pages": "86–88 e 165",
+          "options": [
+            "Cultivar plantas",
+            "Criar animais",
+            "Extrair recursos naturais",
+            "Controlar semáforos de uma avenida movimentada"
+          ]
+        },
+        {
+          "id": "m2-10",
+          "type": "multi",
+          "prompt": "Marque os DOIS impactos que podem ocorrer na extração mineral.",
+          "answer": [
+            "Retirada de vegetação",
+            "Poluição da água"
+          ],
+          "explain": "A mineração pode retirar a cobertura vegetal, alterar o solo e afetar águas e animais. Por isso precisa de estudo dos impactos e cuidados.",
+          "pages": "87 e 94",
+          "options": [
+            "Retirada de vegetação",
+            "Poluição da água",
+            "Criação automática de novas florestas",
+            "Proteção garantida de todos os animais"
+          ]
+        },
+        {
+          "id": "m2-11",
+          "type": "fill",
+          "prompt": "A extração de ouro e pedras preciosas é chamada de _____.",
+          "answer": "garimpo",
+          "explain": "O garimpo pode usar equipamentos simples ou máquinas. Nos dois casos, é uma forma de extrair recursos minerais da natureza.",
+          "pages": "88 e 91"
+        },
+        {
+          "id": "m2-12",
+          "type": "order",
+          "prompt": "O iogurte está atrasado para o lanche! Organize sua viagem simplificada.",
+          "answer": [
+            "Obter leite na criação de gado",
+            "Transformar leite em iogurte na indústria",
+            "Transportar o iogurte até o mercado",
+            "Vender o iogurte no comércio",
+            "Consumir o iogurte"
+          ],
+          "explain": "O produto depende de várias atividades. Há também transporte do leite até a fábrica: campo e cidade se complementam durante a produção e a circulação.",
+          "pages": "89"
+        }
+      ]
+    },
+    {
+      "title": "O chão tem uma história",
+      "icon": "🌱",
+      "color": "peach",
+      "pages": "93–94, 97 e 166–167",
+      "desc": "Um chão vivo merece mais que uma pisadinha.",
+      "facts": [
+        [
+          "Solo não é só sujeira",
+          "O solo é a camada superficial da Terra onde muitas plantas crescem e muitos animais vivem. Também sustenta atividades humanas e ajuda a produzir alimentos."
+        ],
+        [
+          "Passagem para a chuva",
+          "Impermeabilizar é impedir a passagem de água. Asfalto e cimento dificultam a entrada da chuva no solo; áreas verdes e pisos permeáveis ajudam a água a infiltrar."
+        ],
+        [
+          "Três palavras, três ideias",
+          "Erosão é desgaste e transporte de solo. Deslizamento é o movimento de terra em uma encosta. Impermeabilização impede a infiltração de água."
+        ],
+        [
+          "A vegetação protege",
+          "Retirar a vegetação deixa o solo exposto. Em terrenos inclinados, a chuva pode encharcar a terra e favorecer deslizamentos. Vegetação ajuda a reduzir riscos."
+        ]
+      ],
+      "reflect": "Explique por que cobrir um quintal inteiro com cimento muda o caminho da água da chuva.",
+      "questions": [
+        {
+          "id": "m3-1",
+          "type": "single",
+          "prompt": "O que é o solo?",
+          "answer": "A camada superficial da Terra",
+          "explain": "O solo é a camada superficial onde vivem muitos seres vivos e crescem plantas. O asfalto é uma cobertura que as pessoas colocam sobre ele.",
+          "pages": "93 e 166",
+          "options": [
+            "A camada superficial da Terra",
+            "Uma camada de nuvens",
+            "Somente o asfalto das ruas"
+          ]
+        },
+        {
+          "id": "m3-2",
+          "type": "single",
+          "prompt": "Por que o solo é importante para a alimentação?",
+          "answer": "Nele são cultivadas muitas plantas que comemos",
+          "explain": "Verduras, grãos e muitas outras plantas são cultivados no solo. As plantas também precisam de água, luz e condições adequadas.",
+          "pages": "93",
+          "options": [
+            "Nele são cultivadas muitas plantas que comemos",
+            "Ele transforma qualquer pedra em comida",
+            "Ele substitui a água das plantas"
+          ]
+        },
+        {
+          "id": "m3-3",
+          "type": "single",
+          "prompt": "Um quintal foi coberto inteiramente com cimento. O que tende a acontecer com a chuva?",
+          "answer": "Fica mais difícil a água entrar no solo",
+          "explain": "O cimento impermeabiliza a superfície. Com menos infiltração, mais água pode escorrer por cima do chão.",
+          "pages": "93",
+          "options": [
+            "Fica mais difícil a água entrar no solo",
+            "Toda a água entra mais rápido na terra",
+            "A chuva deixa de cair no quintal"
+          ]
+        },
+        {
+          "id": "m3-4",
+          "type": "single",
+          "prompt": "Qual opção permite melhor a passagem da água para o solo?",
+          "answer": "Um piso permeável com espaços para infiltração",
+          "explain": "Permeável significa que permite passagem. Espaços adequados no piso e áreas verdes ajudam a chuva a chegar ao solo.",
+          "pages": "93",
+          "options": [
+            "Um piso permeável com espaços para infiltração",
+            "Uma camada contínua de asfalto",
+            "Um chão totalmente coberto com cimento"
+          ]
+        },
+        {
+          "id": "m3-5",
+          "type": "single",
+          "prompt": "Depois da retirada da mata, a chuva carrega partículas de terra. Qual processo está acontecendo?",
+          "answer": "Erosão",
+          "explain": "Erosão é o desgaste e o transporte do solo. Sem a cobertura vegetal, a terra fica mais exposta à ação da chuva.",
+          "pages": "94 e 167",
+          "options": [
+            "Erosão",
+            "Comércio",
+            "Irrigação"
+          ]
+        },
+        {
+          "id": "m3-6",
+          "type": "single",
+          "prompt": "Em uma encosta, uma grande porção de terra escorregou após muita chuva. O que ocorreu?",
+          "answer": "Deslizamento",
+          "explain": "Deslizamento é o movimento de terra em terreno inclinado. A chuva pode encharcar o solo e contribuir para esse movimento.",
+          "pages": "93 e 97",
+          "options": [
+            "Deslizamento",
+            "Coleta seletiva",
+            "Impermeabilização"
+          ]
+        },
+        {
+          "id": "m3-7",
+          "type": "single",
+          "prompt": "Preservar a vegetação ajuda a proteger o solo.",
+          "answer": "Verdadeiro",
+          "explain": "A cobertura vegetal e as raízes ajudam a proteger o solo e diminuir a erosão. Em encostas, esse cuidado também ajuda a reduzir riscos.",
+          "pages": "93–94",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m3-8",
+          "type": "single",
+          "prompt": "Erosão e impermeabilização significam exatamente a mesma coisa.",
+          "answer": "Falso",
+          "explain": "Erosão envolve desgaste e transporte do solo. Impermeabilização impede a passagem de água para o solo. São processos diferentes.",
+          "pages": "93–94 e 167",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m3-9",
+          "type": "multi",
+          "prompt": "Marque os DOIS cuidados que ajudam a água a entrar no solo urbano.",
+          "answer": [
+            "Manter áreas com grama",
+            "Usar calçamento permeável"
+          ],
+          "explain": "Áreas verdes e calçamento permeável favorecem a infiltração. O cimento e o asfalto contínuos fazem o contrário.",
+          "pages": "93 e 96",
+          "options": [
+            "Manter áreas com grama",
+            "Usar calçamento permeável",
+            "Asfaltar todo espaço livre",
+            "Cobrir o jardim com cimento"
+          ]
+        },
+        {
+          "id": "m3-10",
+          "type": "multi",
+          "prompt": "Marque os DOIS fatores que podem aumentar o risco de deslizamento.",
+          "answer": [
+            "Solo encharcado em uma encosta",
+            "Retirada da vegetação da encosta"
+          ],
+          "explain": "O terreno inclinado, a água no solo e a falta de vegetação podem favorecer deslizamentos. Preservar vegetação ajuda, mas não elimina todos os riscos.",
+          "pages": "93 e 97",
+          "options": [
+            "Solo encharcado em uma encosta",
+            "Retirada da vegetação da encosta",
+            "Preservação da cobertura vegetal",
+            "Manutenção de áreas verdes"
+          ]
+        },
+        {
+          "id": "m3-11",
+          "type": "fill",
+          "prompt": "Impedir a passagem de água no solo é _____.",
+          "answer": "impermeabilizar",
+          "explain": "Impermeabilizar é fechar a passagem da água. É por isso que uma superfície coberta de asfalto se comporta de modo diferente de um jardim.",
+          "pages": "93"
+        },
+        {
+          "id": "m3-12",
+          "type": "order",
+          "prompt": "Organize esta sequência que pode levar à erosão.",
+          "answer": [
+            "A vegetação é retirada",
+            "O solo fica exposto",
+            "A chuva carrega partículas de terra"
+          ],
+          "explain": "A retirada da vegetação deixa a terra menos protegida. A chuva pode então desgastar e transportar parte desse solo.",
+          "pages": "94"
+        }
+      ]
+    },
+    {
+      "title": "Equipe de proteção do solo",
+      "icon": "♻️",
+      "color": "yellow",
+      "pages": "94–97 e 166–167",
+      "desc": "O lixo não some num passe de mágica!",
+      "facts": [
+        [
+          "Jogar fora ainda é aqui",
+          "O lixo descartado continua em algum lugar do planeta. Reduzir resíduos, separar materiais e destiná-los corretamente ajuda a evitar poluição."
+        ],
+        [
+          "Coletar não é transformar",
+          "Coleta seletiva separa e recolhe materiais. Reciclagem transforma materiais descartados em novos produtos. Uma ajuda a outra."
+        ],
+        [
+          "Cuidar da produção",
+          "Agrotóxicos combatem pragas, mas podem contaminar solo, água e seres vivos. O livro destaca controle natural de pragas e adubo orgânico como cuidados."
+        ],
+        [
+          "Sem destruir a proteção",
+          "Queimadas podem empobrecer o solo, destruir seres vivos e poluir o ar. Mineração pode abrir crateras. Manter vegetação protege o solo."
+        ]
+      ],
+      "reflect": "Dê dois exemplos de cuidados com o solo e explique como cada um ajuda. Não basta dizer que é “bom para a natureza”!",
+      "questions": [
+        {
+          "id": "m4-1",
+          "type": "single",
+          "prompt": "Um saco de lixo foi jogado num terreno vazio. O lixo desapareceu?",
+          "answer": "Não. Ele continua no ambiente e pode poluir",
+          "explain": "Tudo que descartamos vai para algum lugar. O descarte inadequado pode contaminar o solo e a água.",
+          "pages": "94–95",
+          "options": [
+            "Não. Ele continua no ambiente e pode poluir",
+            "Sim. Fora de casa ele deixa de existir",
+            "Sim. A terra transforma tudo imediatamente"
+          ]
+        },
+        {
+          "id": "m4-2",
+          "type": "single",
+          "prompt": "O que é coleta seletiva?",
+          "answer": "Separar e recolher materiais conforme o tipo",
+          "explain": "Separar materiais facilita seu encaminhamento à reciclagem e à destinação adequada. Jogar tudo junto dificulta esse cuidado.",
+          "pages": "95–96",
+          "options": [
+            "Separar e recolher materiais conforme o tipo",
+            "Queimar todo o lixo junto",
+            "Enterrar lixo em qualquer quintal"
+          ]
+        },
+        {
+          "id": "m4-3",
+          "type": "single",
+          "prompt": "Qual é a diferença entre coleta seletiva e reciclagem?",
+          "answer": "A coleta separa e recolhe; a reciclagem transforma materiais",
+          "explain": "São etapas relacionadas: primeiro materiais podem ser separados e recolhidos; depois, materiais recicláveis podem ser transformados em novos produtos.",
+          "pages": "95",
+          "options": [
+            "A coleta separa e recolhe; a reciclagem transforma materiais",
+            "As duas significam jogar lixo no rio",
+            "A reciclagem é apenas trocar a cor da lixeira"
+          ]
+        },
+        {
+          "id": "m4-4",
+          "type": "single",
+          "prompt": "Para que são usados agrotóxicos nas plantações?",
+          "answer": "Para combater pragas",
+          "explain": "Agrotóxicos são usados contra pragas, mas podem trazer contaminação e riscos a seres vivos. O livro propõe priorizar métodos naturais de controle.",
+          "pages": "94 e 167",
+          "options": [
+            "Para combater pragas",
+            "Para fabricar chuva",
+            "Para substituir todos os nutrientes do solo"
+          ]
+        },
+        {
+          "id": "m4-5",
+          "type": "single",
+          "prompt": "Por que um trabalhador usa equipamentos de proteção ao lidar com produtos tóxicos?",
+          "answer": "Para reduzir o contato com substâncias perigosas",
+          "explain": "Equipamentos de proteção ajudam a proteger o trabalhador. Isso não significa que o produto deixe de oferecer riscos ao ambiente.",
+          "pages": "97",
+          "options": [
+            "Para reduzir o contato com substâncias perigosas",
+            "Para fazer o produto virar água",
+            "Para impedir qualquer impacto no ambiente"
+          ]
+        },
+        {
+          "id": "m4-6",
+          "type": "single",
+          "prompt": "Qual atividade pode abrir grandes crateras no solo?",
+          "answer": "Extrativismo mineral",
+          "explain": "A retirada de materiais na mineração pode escavar o terreno e deixar grandes crateras. Essa atividade requer estudo e cuidados com o ambiente.",
+          "pages": "94 e 167",
+          "options": [
+            "Extrativismo mineral",
+            "Coleta seletiva",
+            "Rega cuidadosa de um jardim"
+          ]
+        },
+        {
+          "id": "m4-7",
+          "type": "single",
+          "prompt": "Queimadas podem poluir o ar e prejudicar o solo.",
+          "answer": "Verdadeiro",
+          "explain": "O fogo pode destruir vegetação e seres vivos, prejudicar a matéria orgânica do solo e produzir fumaça. Evitar queimadas ajuda a preservar o ambiente.",
+          "pages": "94",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m4-8",
+          "type": "single",
+          "prompt": "Preservar o solo é uma tarefa apenas de quem mora no campo.",
+          "answer": "Falso",
+          "explain": "O solo também é usado e afetado nas cidades. Descarte correto do lixo, áreas verdes e superfícies permeáveis são cuidados urbanos.",
+          "pages": "93–96",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m4-9",
+          "type": "multi",
+          "prompt": "Marque as TRÊS ações de proteção do solo.",
+          "answer": [
+            "Manter áreas de floresta",
+            "Dar destino adequado ao lixo",
+            "Usar adubo orgânico de modo adequado"
+          ],
+          "explain": "Proteger vegetação, cuidar dos resíduos e adotar boas práticas agrícolas ajudam a conservar o solo. Queimar a cobertura pode prejudicá-lo.",
+          "pages": "94–96",
+          "options": [
+            "Manter áreas de floresta",
+            "Dar destino adequado ao lixo",
+            "Usar adubo orgânico de modo adequado",
+            "Queimar a vegetação para limpar um terreno"
+          ]
+        },
+        {
+          "id": "m4-10",
+          "type": "multi",
+          "prompt": "Marque os DOIS problemas ligados ao uso inadequado de agrotóxicos.",
+          "answer": [
+            "Contaminação da água",
+            "Riscos para animais e pessoas"
+          ],
+          "explain": "Produtos usados na lavoura podem atingir outros seres vivos e chegar à água e ao solo. Por isso, não afetam apenas a praga.",
+          "pages": "94 e 97",
+          "options": [
+            "Contaminação da água",
+            "Riscos para animais e pessoas",
+            "Proteção garantida de todos os seres vivos",
+            "Fim da necessidade de água nas plantas"
+          ]
+        },
+        {
+          "id": "m4-11",
+          "type": "fill",
+          "prompt": "O desgaste do solo, que pode aumentar após derrubar árvores, chama-se _____.",
+          "answer": "erosão",
+          "explain": "A vegetação protege a terra. Sem essa proteção, a ação da água pode desgastar e carregar mais partículas do solo.",
+          "pages": "94 e 167"
+        },
+        {
+          "id": "m4-12",
+          "type": "order",
+          "prompt": "Organize um caminho possível para uma embalagem reciclável.",
+          "answer": [
+            "Separar a embalagem dos outros resíduos",
+            "Encaminhar para coleta seletiva",
+            "Transformar o material pela reciclagem"
+          ],
+          "explain": "Separação e coleta ajudam o material a chegar à reciclagem. Assim, ele pode voltar como matéria-prima de novos produtos.",
+          "pages": "95"
+        }
+      ]
+    },
+    {
+      "title": "Água por toda parte",
+      "icon": "💧",
+      "color": "sky",
+      "pages": "98–99, 101–103 e 168–169",
+      "desc": "Até o seu lanche precisou de água para existir.",
+      "facts": [
+        [
+          "Muito além do copo",
+          "Usamos água para beber, cozinhar e cuidar da higiene. Ela também é ambiente de vida, caminho de transporte e fonte de lazer."
+        ],
+        [
+          "Água no trabalho",
+          "Agricultura, pecuária e indústria precisam de água. Irrigar é levar água às plantações na quantidade adequada."
+        ],
+        [
+          "Energia e transformação",
+          "Hidrelétricas usam o movimento da água para gerar eletricidade. Seus reservatórios podem alagar áreas, afetar seres vivos e deslocar moradores."
+        ],
+        [
+          "Leia o gráfico com atenção",
+          "No gráfico histórico da página 103, agricultura e pecuária juntas têm a maior parcela de uso da água. O gráfico é do livro, com fonte de 2013; não é uma medição de hoje."
+        ]
+      ],
+      "reflect": "Conte três usos diferentes da água. Escolha um e explique quem seria afetado se faltasse água para essa atividade.",
+      "questions": [
+        {
+          "id": "m5-1",
+          "type": "single",
+          "prompt": "Por que a água é um bem precioso?",
+          "answer": "Porque é essencial à vida e a muitas atividades",
+          "explain": "Pessoas, plantas e outros animais dependem de água. Além da sobrevivência, muitas atividades de produção e transporte também precisam dela.",
+          "pages": "98–99",
+          "options": [
+            "Porque é essencial à vida e a muitas atividades",
+            "Porque só serve para encher piscinas",
+            "Porque os animais não precisam dela"
+          ]
+        },
+        {
+          "id": "m5-2",
+          "type": "single",
+          "prompt": "Uma agricultora leva água aos canteiros quando falta chuva. O que ela está fazendo?",
+          "answer": "Irrigação",
+          "explain": "Irrigar é fornecer água ao cultivo. O objetivo é atender às necessidades das plantas, cuidando para evitar desperdício.",
+          "pages": "99 e 169",
+          "options": [
+            "Irrigação",
+            "Assoreamento",
+            "Garimpo"
+          ]
+        },
+        {
+          "id": "m5-3",
+          "type": "single",
+          "prompt": "Um barco leva passageiros pelo rio. Nesse exemplo, a água é usada como quê?",
+          "answer": "Via de transporte",
+          "explain": "Rios e outros corpos de água podem servir de caminho para embarcações transportarem pessoas e produtos.",
+          "pages": "99 e 168",
+          "options": [
+            "Via de transporte",
+            "Matéria-prima de cimento",
+            "Forma de coleta seletiva"
+          ]
+        },
+        {
+          "id": "m5-4",
+          "type": "single",
+          "prompt": "Uma usina hidrelétrica usa a água para produzir o quê?",
+          "answer": "Eletricidade",
+          "explain": "Hidrelétricas aproveitam o movimento da água para gerar eletricidade. A água não se transforma em petróleo nem em solo.",
+          "pages": "99 e 103",
+          "options": [
+            "Eletricidade",
+            "Petróleo",
+            "Solo"
+          ]
+        },
+        {
+          "id": "m5-5",
+          "type": "single",
+          "prompt": "Qual pode ser um impacto de um reservatório de hidrelétrica?",
+          "answer": "Alagar áreas e alterar habitats",
+          "explain": "O alagamento pode modificar habitats de plantas e animais e exigir a saída de moradores. Gerar energia também envolve decisões sobre impactos.",
+          "pages": "103",
+          "options": [
+            "Alagar áreas e alterar habitats",
+            "Fazer todas as florestas crescerem imediatamente",
+            "Eliminar qualquer necessidade de cuidado ambiental"
+          ]
+        },
+        {
+          "id": "m5-6",
+          "type": "single",
+          "prompt": "No gráfico do livro, qual grupo tem a maior parcela de uso da água?",
+          "answer": "Agricultura e pecuária",
+          "explain": "No gráfico reproduzido no livro, agricultura e pecuária juntas representam 82,8%, a maior parcela entre os grupos mostrados. Esses dados são históricos.",
+          "pages": "103",
+          "options": [
+            "Agricultura e pecuária",
+            "Abastecimento humano",
+            "Indústria"
+          ],
+          "visual": "chart"
+        },
+        {
+          "id": "m5-7",
+          "type": "single",
+          "prompt": "A água é necessária apenas dentro das casas.",
+          "answer": "Falso",
+          "explain": "Além do uso doméstico, agricultura, pecuária, indústria, transporte e muitos seres vivos dependem da água.",
+          "pages": "99 e 101",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m5-8",
+          "type": "single",
+          "prompt": "A criação de animais também precisa de água.",
+          "answer": "Verdadeiro",
+          "explain": "Os animais precisam beber água e receber cuidados. Por isso a água é fundamental também na pecuária.",
+          "pages": "99 e 168",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m5-9",
+          "type": "multi",
+          "prompt": "Marque os TRÊS usos da água apresentados no livro.",
+          "answer": [
+            "Preparar alimentos",
+            "Irrigar plantações",
+            "Transportar pessoas em barcos"
+          ],
+          "explain": "Cozinhar, irrigar e transportar são usos da água. Ela não substitui a luz necessária a muitas plantas.",
+          "pages": "99 e 168",
+          "options": [
+            "Preparar alimentos",
+            "Irrigar plantações",
+            "Transportar pessoas em barcos",
+            "Substituir a luz do Sol"
+          ]
+        },
+        {
+          "id": "m5-10",
+          "type": "multi",
+          "prompt": "Marque as DUAS afirmações corretas sobre hidrelétricas.",
+          "answer": [
+            "Podem gerar eletricidade",
+            "Seus reservatórios podem afetar moradores e habitats"
+          ],
+          "explain": "Precisamos considerar o benefício da eletricidade e os impactos do alagamento. Uma mesma obra pode trazer benefícios e problemas.",
+          "pages": "103",
+          "options": [
+            "Podem gerar eletricidade",
+            "Seus reservatórios podem afetar moradores e habitats",
+            "Nunca alteram a paisagem",
+            "Produzem petróleo para os carros"
+          ]
+        },
+        {
+          "id": "m5-11",
+          "type": "fill",
+          "prompt": "Levar água às plantações é fazer _____.",
+          "answer": "irrigação",
+          "explain": "A irrigação ajuda a fornecer água ao cultivo, principalmente quando a chuva é insuficiente ou mal distribuída.",
+          "pages": "99 e 169"
+        },
+        {
+          "id": "m5-12",
+          "type": "order",
+          "prompt": "Use o gráfico para ordenar os grupos, do MAIOR para o MENOR uso da água.",
+          "answer": [
+            "Agricultura e pecuária",
+            "Abastecimento humano",
+            "Indústria"
+          ],
+          "explain": "No gráfico da página 103: 82,8% para agricultura e pecuária, 10,6% para abastecimento humano e 6,7% para indústria. A soma difere um pouco de 100% por arredondamento.",
+          "pages": "103",
+          "visual": "chart"
+        }
+      ]
+    },
+    {
+      "title": "Guardiões dos rios",
+      "icon": "🌿",
+      "color": "mint",
+      "pages": "99–103 e 168–169",
+      "desc": "A mata ciliar é a equipe de proteção das margens.",
+      "facts": [
+        [
+          "Margens com proteção",
+          "Mata ciliar é a vegetação nas margens dos rios. Suas raízes ajudam a segurar o solo e a diminuir a quantidade de terra levada pela chuva para o rio."
+        ],
+        [
+          "Rio ficando raso",
+          "Assoreamento é o acúmulo de terra e outros sedimentos no rio, deixando-o mais raso. A retirada da mata ciliar pode favorecer esse processo."
+        ],
+        [
+          "Captar e reutilizar",
+          "Uma cisterna pode guardar água da chuva para usos como limpeza e rega. Reúso é utilizar uma água novamente, por exemplo na limpeza. Esses exemplos não são água pronta para beber."
+        ],
+        [
+          "Cuidar é responsabilidade compartilhada",
+          "Pessoas e atividades econômicas devem evitar desperdício e poluição. Fechar torneiras, reduzir tempo de banho e cuidar de vazamentos ajuda. Petróleo, lixo e outros poluentes prejudicam as águas."
+        ]
+      ],
+      "reflect": "Explique a ligação entre tirar a mata da margem e um rio ficar mais raso. Depois, sugira dois cuidados com a água.",
+      "questions": [
+        {
+          "id": "m6-1",
+          "type": "single",
+          "prompt": "O que é mata ciliar?",
+          "answer": "Vegetação nas margens dos rios",
+          "explain": "A mata ciliar fica nas margens e ajuda a proteger o solo. Suas raízes ajudam a diminuir o transporte de terra para o rio.",
+          "pages": "100, 102 e 168",
+          "options": [
+            "Vegetação nas margens dos rios",
+            "Uma camada de plástico no rio",
+            "Qualquer plantação muito longe da água"
+          ]
+        },
+        {
+          "id": "m6-2",
+          "type": "single",
+          "prompt": "Depois de perder a mata da margem, um rio acumulou terra e ficou mais raso. Qual é o nome disso?",
+          "answer": "Assoreamento",
+          "explain": "Assoreamento é o acúmulo de sedimentos, como terra, no rio. A chuva pode levar para ele o solo das margens desprotegidas.",
+          "pages": "100 e 169",
+          "options": [
+            "Assoreamento",
+            "Irrigação",
+            "Reciclagem"
+          ]
+        },
+        {
+          "id": "m6-3",
+          "type": "single",
+          "prompt": "Qual uso combina com a água da chuva guardada na cisterna do exemplo?",
+          "answer": "Regar o jardim",
+          "explain": "O livro cita a água da chuva para limpeza e rega. Água coletada não deve ser considerada própria para beber só porque parece limpa.",
+          "pages": "99",
+          "options": [
+            "Regar o jardim",
+            "Beber diretamente, sem tratamento",
+            "Preparar suco diretamente"
+          ]
+        },
+        {
+          "id": "m6-4",
+          "type": "single",
+          "prompt": "Usar novamente água da máquina de lavar para limpar um piso é um exemplo de quê?",
+          "answer": "Reúso",
+          "explain": "Reúso é empregar novamente uma água em uma atividade adequada. No exemplo, ela pode servir à limpeza, e não ao preparo de alimentos.",
+          "pages": "100–101 e 169",
+          "options": [
+            "Reúso",
+            "Garimpo",
+            "Assoreamento"
+          ]
+        },
+        {
+          "id": "m6-5",
+          "type": "single",
+          "prompt": "O que pode acontecer quando petróleo é derramado no mar?",
+          "answer": "Poluição da água e prejuízo aos animais",
+          "explain": "O petróleo polui a água e pode causar a morte de animais. Prevenir acidentes no transporte e responsabilizar os causadores são cuidados citados no livro.",
+          "pages": "100",
+          "options": [
+            "Poluição da água e prejuízo aos animais",
+            "A água fica própria para beber",
+            "Os peixes passam a respirar petróleo"
+          ]
+        },
+        {
+          "id": "m6-6",
+          "type": "single",
+          "prompt": "A torneira está pingando sem parar. Qual atitude ajuda?",
+          "answer": "Avisar um adulto para providenciar o conserto",
+          "explain": "Pequenos vazamentos também desperdiçam água ao longo do tempo. Comunicar o problema permite que um adulto providencie o reparo.",
+          "pages": "101",
+          "options": [
+            "Avisar um adulto para providenciar o conserto",
+            "Deixar pingar porque é pouca água",
+            "Abrir ainda mais a torneira"
+          ]
+        },
+        {
+          "id": "m6-7",
+          "type": "single",
+          "prompt": "Só as crianças precisam economizar água.",
+          "answer": "Falso",
+          "explain": "Combater o desperdício é responsabilidade de todos: famílias, escolas, empresas, agricultura, indústria e outros setores.",
+          "pages": "101",
+          "options": [
+            "Falso",
+            "Verdadeiro"
+          ]
+        },
+        {
+          "id": "m6-8",
+          "type": "single",
+          "prompt": "Sem mata ciliar, a chuva pode levar mais terra das margens para o rio.",
+          "answer": "Verdadeiro",
+          "explain": "A vegetação ajuda a proteger o solo. Quando é retirada, a terra fica mais exposta e pode ser carregada para dentro do rio.",
+          "pages": "100",
+          "options": [
+            "Verdadeiro",
+            "Falso"
+          ]
+        },
+        {
+          "id": "m6-9",
+          "type": "multi",
+          "prompt": "Marque as TRÊS atitudes que ajudam a economizar água.",
+          "answer": [
+            "Fechar a torneira enquanto escova os dentes",
+            "Diminuir o tempo de banho",
+            "Usar balde e vassoura na limpeza"
+          ],
+          "explain": "Usar apenas a água necessária evita desperdício. Uma torneira aberta sem uso e uma mangueira por muito tempo gastam água sem necessidade.",
+          "pages": "101–102",
+          "options": [
+            "Fechar a torneira enquanto escova os dentes",
+            "Diminuir o tempo de banho",
+            "Usar balde e vassoura na limpeza",
+            "Lavar a calçada com mangueira aberta por muito tempo"
+          ]
+        },
+        {
+          "id": "m6-10",
+          "type": "multi",
+          "prompt": "Marque as DUAS ações que ajudam a proteger rios.",
+          "answer": [
+            "Preservar a mata ciliar",
+            "Dar destino correto aos resíduos"
+          ],
+          "explain": "A mata protege as margens e o descarte adequado evita poluição. Proteger rios envolve tanto cuidar da vegetação quanto impedir a chegada de resíduos.",
+          "pages": "100–102",
+          "options": [
+            "Preservar a mata ciliar",
+            "Dar destino correto aos resíduos",
+            "Jogar lixo na margem",
+            "Despejar petróleo na água"
+          ]
+        },
+        {
+          "id": "m6-11",
+          "type": "fill",
+          "prompt": "Utilizar a água novamente em uma atividade adequada é fazer _____.",
+          "answer": "reúso",
+          "explain": "Reúso é um novo uso para a água. Ele ajuda a poupar água de abastecimento em tarefas que não exigem água para beber.",
+          "pages": "100 e 169"
+        },
+        {
+          "id": "m6-12",
+          "type": "order",
+          "prompt": "Organize a sequência que pode deixar um rio mais raso.",
+          "answer": [
+            "A mata ciliar é retirada",
+            "A chuva carrega terra da margem",
+            "A terra se acumula dentro do rio",
+            "O rio fica mais raso"
+          ],
+          "explain": "Essa sequência explica o assoreamento. Preservar a vegetação nas margens ajuda a reduzir a erosão e a chegada de sedimentos ao rio.",
+          "pages": "100 e 169"
+        }
+      ]
+    }
+  ],
+  "searches": [
+    {
+      "title": "Palavras do trabalho",
+      "pages": "82–91",
+      "words": [
+        {
+          "word": "CAMPO",
+          "concept": "Espaço rural, com atividades como agricultura, pecuária e extrativismo."
+        },
+        {
+          "word": "CIDADE",
+          "concept": "Espaço urbano, com moradias, comércio, indústrias e serviços."
+        },
+        {
+          "word": "LEITE",
+          "concept": "Matéria-prima que pode ser transformada em iogurte pela indústria."
+        },
+        {
+          "word": "PLANTIO",
+          "concept": "Cultivar plantas é uma atividade da agricultura."
+        },
+        {
+          "word": "SAL",
+          "concept": "Recurso mineral usado nos alimentos e em sua conservação."
+        },
+        {
+          "word": "TRABALHO",
+          "concept": "Ação humana que atende necessidades e pode transformar a paisagem."
+        }
+      ]
+    },
+    {
+      "title": "O solo e seus cuidados",
+      "pages": "93–97",
+      "words": [
+        {
+          "word": "SOLO",
+          "concept": "Camada superficial da Terra onde crescem plantas e vivem muitos seres vivos."
+        },
+        {
+          "word": "EROSAO",
+          "concept": "Desgaste e transporte de partículas do solo."
+        },
+        {
+          "word": "MATA",
+          "concept": "A vegetação ajuda a proteger o solo da ação da chuva."
+        },
+        {
+          "word": "COLETA",
+          "concept": "Na coleta seletiva, materiais separados são recolhidos para destinação adequada."
+        },
+        {
+          "word": "LIXO",
+          "concept": "Tudo que descartamos continua no planeta e precisa de destino adequado."
+        },
+        {
+          "word": "RAIZES",
+          "concept": "Ajudam a sustentar plantas e a proteger o solo."
+        }
+      ]
+    },
+    {
+      "title": "Água em palavras",
+      "pages": "98–103",
+      "words": [
+        {
+          "word": "AGUA",
+          "concept": "Recurso essencial à vida e a muitas atividades humanas."
+        },
+        {
+          "word": "REUSO",
+          "concept": "Utilizar uma água novamente em uma atividade adequada."
+        },
+        {
+          "word": "CILIAR",
+          "concept": "A mata ciliar fica nas margens de rios e ajuda a protegê-las."
+        },
+        {
+          "word": "RIO",
+          "concept": "Pode ser habitat, via de transporte e fonte de água."
+        },
+        {
+          "word": "CHUVA",
+          "concept": "Sua água pode ser captada para usos como limpeza e rega."
+        },
+        {
+          "word": "IRRIGACAO",
+          "concept": "Fornecimento de água às plantações."
+        }
+      ]
+    }
+  ],
+  "crosswords": [
+    {
+      "title": "Caminhos do trabalho",
+      "pages": "84–89 e 166",
+      "words": [
+        {
+          "word": "CIDADE",
+          "clue": "Espaço urbano, onde há comércio e muitos serviços.",
+          "concept": "Cidades podem ter paisagens variadas, com casas baixas ou prédios altos."
+        },
+        {
+          "word": "CAMPO",
+          "clue": "Espaço rural.",
+          "concept": "No campo há cultivo, criação de animais e extrativismo."
+        },
+        {
+          "word": "LEITE",
+          "clue": "Matéria-prima do iogurte, obtida de vacas.",
+          "concept": "O leite vem da pecuária e pode ser transformado na indústria."
+        },
+        {
+          "word": "SAL",
+          "clue": "Recurso mineral usado para temperar alimentos.",
+          "concept": "A obtenção de sal é um exemplo de extrativismo mineral."
+        },
+        {
+          "word": "COMERCIO",
+          "clue": "Atividade de compra e venda de mercadorias.",
+          "concept": "Comércio vende produtos; indústria transforma matérias-primas."
+        }
+      ],
+      "entries": [
+        {
+          "word": "CIDADE",
+          "row": 4,
+          "col": 1,
+          "dir": "down"
+        },
+        {
+          "word": "CAMPO",
+          "row": 0,
+          "col": 2,
+          "dir": "down"
+        },
+        {
+          "word": "LEITE",
+          "row": 3,
+          "col": 4,
+          "dir": "down"
+        },
+        {
+          "word": "SAL",
+          "row": 7,
+          "col": 0,
+          "dir": "across"
+        },
+        {
+          "word": "COMERCIO",
+          "row": 4,
+          "col": 1,
+          "dir": "across"
+        }
+      ]
+    },
+    {
+      "title": "Debaixo dos nossos pés",
+      "pages": "93–97 e 167",
+      "words": [
+        {
+          "word": "SOLO",
+          "clue": "Camada superficial da Terra.",
+          "concept": "O solo sustenta plantas, abriga animais e participa da produção de alimentos."
+        },
+        {
+          "word": "EROSAO",
+          "clue": "Desgaste e transporte do solo.",
+          "concept": "A retirada da vegetação pode aumentar a erosão."
+        },
+        {
+          "word": "COLETA",
+          "clue": "Complete: _____ seletiva.",
+          "concept": "Separar e recolher materiais facilita o encaminhamento à reciclagem."
+        },
+        {
+          "word": "MATA",
+          "clue": "Conjunto de vegetação que ajuda a proteger o solo.",
+          "concept": "Manter áreas de mata ajuda a conservar o solo."
+        },
+        {
+          "word": "LIXO",
+          "clue": "Material descartado que precisa de destino adequado.",
+          "concept": "Descarte incorreto pode contaminar o solo e as águas."
+        }
+      ],
+      "entries": [
+        {
+          "word": "SOLO",
+          "row": 2,
+          "col": 5,
+          "dir": "down"
+        },
+        {
+          "word": "EROSAO",
+          "row": 3,
+          "col": 3,
+          "dir": "across"
+        },
+        {
+          "word": "COLETA",
+          "row": 0,
+          "col": 3,
+          "dir": "down"
+        },
+        {
+          "word": "MATA",
+          "row": 2,
+          "col": 7,
+          "dir": "down"
+        },
+        {
+          "word": "LIXO",
+          "row": 1,
+          "col": 0,
+          "dir": "across"
+        }
+      ]
+    },
+    {
+      "title": "Segredos da água",
+      "pages": "99–103 e 169",
+      "words": [
+        {
+          "word": "AGUA",
+          "clue": "Recurso que bebemos e que é essencial à vida.",
+          "concept": "A água também é usada na agricultura, indústria e em muitas outras atividades."
+        },
+        {
+          "word": "REUSO",
+          "clue": "Utilização de uma água novamente.",
+          "concept": "Reúso em tarefas adequadas ajuda a poupar água de abastecimento."
+        },
+        {
+          "word": "CILIAR",
+          "clue": "Complete: mata _____, nas margens dos rios.",
+          "concept": "Ela ajuda a segurar o solo das margens e a reduzir o assoreamento."
+        },
+        {
+          "word": "RIO",
+          "clue": "Curso de água que pode ficar mais raso com o assoreamento.",
+          "concept": "Sedimentos acumulados no rio podem diminuir sua profundidade."
+        },
+        {
+          "word": "IRRIGACAO",
+          "clue": "Fornecimento de água ao cultivo.",
+          "concept": "Irrigar ajuda as plantas quando a chuva não fornece água suficiente."
+        }
+      ],
+      "entries": [
+        {
+          "word": "AGUA",
+          "row": 1,
+          "col": 4,
+          "dir": "down"
+        },
+        {
+          "word": "REUSO",
+          "row": 2,
+          "col": 2,
+          "dir": "down"
+        },
+        {
+          "word": "CILIAR",
+          "row": 1,
+          "col": 0,
+          "dir": "down"
+        },
+        {
+          "word": "RIO",
+          "row": 0,
+          "col": 8,
+          "dir": "down"
+        },
+        {
+          "word": "IRRIGACAO",
+          "row": 2,
+          "col": 0,
+          "dir": "across"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script id="geo-app">
+'use strict';
+const DATA=JSON.parse(document.getElementById('geo-content').textContent);
+const QUESTIONS=DATA.missions.flatMap(m=>m.questions);
+const KEY='miguel-geografia-v1';
+const main=document.getElementById('main');
+let storageOK=true,store={version:1,active:null,profiles:[]},toastTimer;
+function storageWarning(){storageOK=false;const n=document.getElementById('storage-notice');n.hidden=false;n.textContent='Você pode jogar, mas o progresso desta sessão não ficará salvo. O navegador bloqueou o armazenamento ou os dados antigos não puderam ser lidos.';}
+try{const raw=localStorage.getItem(KEY);if(raw){const s=JSON.parse(raw);if(s.version!==1||!Array.isArray(s.profiles)||!s.profiles.every(p=>p&&typeof p.name==='string'&&typeof p.id==='string'&&p.answers&&p.awards&&p.drafts&&p.crossDrafts))throw Error('Dados inválidos');store=s;if(!store.profiles.some(p=>p.id===store.active))store.active=null;}localStorage.setItem(KEY,JSON.stringify(store));}catch{storageWarning();}
+function save(){if(storageOK)try{localStorage.setItem(KEY,JSON.stringify(store));}catch{storageWarning();}}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function norm(s){return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase().replace(/\s+/g,' ');}
+function wordNorm(s){return norm(s).replace(/[^a-z]/g,'').toUpperCase();}
+function profile(){return store.profiles.find(p=>p.id===store.active);}
+function xp(){return Object.keys(profile()?.awards||{}).length*10;}
+function totalDone(){return QUESTIONS.filter(q=>profile().answers[q.id]?.mastered).length;}
+function missionDone(i){return DATA.missions[i].questions.every(q=>profile().answers[q.id]?.mastered);}
+function pending(){return QUESTIONS.filter(q=>profile().answers[q.id]?.correct===false);}
+function shuffled(items){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function award(id){if(profile().awards[id])return false;profile().awards[id]=true;save();updateHeader();return true;}
+function record(id,correct){const prev=profile().answers[id];profile().answers[id]={correct,mastered:correct||!!prev?.mastered};if(correct)award('q:'+id);save();updateHeader();}
+function grade(q,value){if(q.type==='multi')return Array.isArray(value)&&new Set(value).size===q.answer.length&&q.answer.every(a=>value.includes(a));if(q.type==='order')return Array.isArray(value)&&value.length===q.answer.length&&q.answer.every((a,i)=>value[i]===a);if(q.type==='fill')return norm(value)===norm(q.answer);return value===q.answer;}
+function toast(message){const el=document.getElementById('toast');el.textContent=message;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.hidden=true,2600);}
+function updateHeader(){const p=profile();document.getElementById('header-actions').innerHTML=p?`<div class="profile"><span id="profile-name" class="profile-name">${esc(p.name)}</span><span class="xp">✦ <span id="xp-total">${xp()}</span> XP</span></div><button class="plain" data-action="switch">Trocar explorador</button><button class="plain" data-action="guide">Guia da família</button>`:'<a class="small" href="index.html">← Todos os quizzes</a>';}
+function view(html,focus=true){main.innerHTML=html;updateHeader();if(focus){main.focus({preventScroll:true});window.scrollTo(0,0);}}
+function back(){return '<button class="plain back" data-action="home" aria-label="Mapa da expedição">← Mapa da expedição</button>';}
+function art(){return `<svg class="art" viewBox="0 0 380 300" fill="none" aria-hidden="true"><ellipse cx="192" cy="155" rx="163" ry="126" fill="#e6edda"/><path d="M58 214l39-149 85 24 86-30 55 159-99 28-84-20z" fill="#fffdf4" stroke="#738269" stroke-width="3" stroke-linejoin="round"/><path d="M182 89l-42 137m128-167-44 187" stroke="#d6dfc9" stroke-width="3"/><path d="M93 180q35-53 75-38t51 41q38 16 58-31" stroke="#a5cfe2" stroke-width="19" stroke-linecap="round"/><path d="M104 109q31-27 69 12t71-11" stroke="#ca9a64" stroke-width="3" stroke-dasharray="6 7"/><path d="M95 137l10-19 10 19m-6-6 11-22 12 22" fill="#69a185"/><path d="M236 90l16-23 16 23v27h-32z" fill="#eaba61"/><path d="M226 91l26-31 26 31" stroke="#b86a4d" stroke-width="7" stroke-linecap="round"/><circle cx="261" cy="204" r="47" fill="#efc66f" stroke="#84672f" stroke-width="3"/><circle cx="261" cy="204" r="36" fill="#fff7df"/><path d="M261 172l-12 32 12-5 12 5z" fill="#b76d59"/><path d="M261 236l12-32-12 5-12-5z" fill="#92b7a9"/><circle cx="261" cy="204" r="5" fill="#524659"/><circle cx="149" cy="172" r="5" fill="#524659"/><circle cx="176" cy="180" r="5" fill="#524659"/><path d="M146 187q8 12 20 5" stroke="#524659" stroke-width="4" stroke-linecap="round"/><path d="M42 83l4-12 4 12 12 4-12 4-4 12-4-12-12-4zm285 35 4-12 4 12 12 4-12 4-4 12-4-12-12-4z" fill="#b18dbf"/><circle cx="310" cy="60" r="11" fill="#e6aa6b"/></svg>`;}
+function welcome(){store.active=null;save();view(`<div class="welcome"><div class="hero"><div><span class="eyebrow">Uma aventura pelo mundo de todo dia</span><h1>Quem vem nessa<br><span style="color:var(--purple)">expedição?</span></h1><p>Eu sou a Bússola Bia! Minha agulha aponta para a próxima descoberta. E você, como quer ser chamado?</p><form id="name-form"><label class="label" for="child-name">Seu nome ou apelido</label><div class="welcome-form"><input id="child-name" name="name" type="text" maxlength="24" autocomplete="nickname" required placeholder="Digite aqui"><button class="primary" type="submit">Começar a expedição</button></div><p id="name-error" role="alert" class="small"></p></form><p class="small muted">Seu progresso fica neste navegador. Use um apelido diferente se outra criança tiver o mesmo nome.</p></div>${art()}</div>${store.profiles.length?`<div class="panel"><h2>Já esteve por aqui?</h2><div class="profile-options">${store.profiles.map(p=>`<button data-action="resume-profile" data-id="${esc(p.id)}">Continuar como ${esc(p.name)}</button>`).join('')}</div></div>`:''}<div class="row"><span class="tag green">6 missões</span><span class="tag">72 perguntas com explicação</span><span class="tag gold">Jogos + descobertas</span></div></div>`);}
+function enter(name){name=name.trim().normalize('NFC');if(!name||name.length>24){document.getElementById('name-error').textContent='Escreva um nome ou apelido com até 24 caracteres.';return;}let p=store.profiles.find(p=>p.name.trim().toLocaleLowerCase('pt-BR')===name.toLocaleLowerCase('pt-BR'));if(!p){p={id:crypto.randomUUID(),name,answers:{},awards:{},drafts:{},crossDrafts:{},session:null};store.profiles.push(p);}store.active=p.id;save();home();}
+function home(){if(!profile())return welcome();const p=profile(),done=totalDone();view(`<div class="hero"><div><span class="eyebrow">Expedição Geografia · Prova de 2/10</span><h1>O mundo está cheio<br>de <span style="color:var(--purple)">porquês!</span></h1><p>Oi, ${esc(p.name)}! Vamos descobrir como o trabalho muda as paisagens e como cuidar do solo e da água?</p><span class="tag green">Uma missão por rodada · cerca de 15–20 min</span></div>${art()}</div><div class="panel"><div class="progress-line"><strong>Seu passaporte de descobertas</strong><span>${done} de 72 questões já acertadas</span></div><div class="track" role="progressbar" aria-label="Questões já acertadas" aria-valuenow="${done}" aria-valuemin="0" aria-valuemax="72"><span style="width:${done/72*100}%"></span></div><p class="small muted" style="margin:10px 0 0">${DATA.missions.filter((_,i)=>missionDone(i)).length} de 6 selos de missão · ${Object.keys(p.awards).filter(k=>k.startsWith('s:')).length} de 18 palavras encontradas · ${Object.keys(p.awards).filter(k=>k.startsWith('c:')).length} de 15 pistas resolvidas</p></div>${p.session&&!p.session.finalized?`<div class="note row between"><div><strong>Uma descoberta ficou esperando você.</strong><br><span class="small">${esc(p.session.title)} · desafio ${p.session.index+1} de ${p.session.ids.length}</span></div><button class="primary" data-action="continue">Continuar rodada</button></div>`:''}<div class="section-head"><h2>Seu mapa de missões</h2><span class="tag">Todas abertas para explorar</span></div><div class="grid">${DATA.missions.map((m,i)=>{const n=m.questions.filter(q=>p.answers[q.id]?.mastered).length;return `<article class="mission" style="--tint:var(--${m.color})"><div class="row between"><span class="icon" aria-hidden="true">${m.icon}</span><span class="tag ${n===12?'green':''}">${n===12?'✓ Selo conquistado':`Missão 0${i+1}`}</span></div><h3>${esc(m.title)}</h3><p>${esc(m.desc)}</p><div class="mission-bottom"><div class="progress-line"><span>${n} de 12 descobertas</span><span>Pág. ${m.pages.split(',')[0]}</span></div><div class="track"><span style="width:${n/12*100}%"></span></div><button data-action="lesson" data-i="${i}" aria-label="Explorar ${esc(m.title)}">Explorar missão →</button></div></article>`}).join('')}</div><div class="section-head"><h2>Outros jeitos de descobrir</h2></div><div class="tools">${[
+['search','🔎','Caça-palavras','3 tabuleiros · encontre e entenda'],['cross','🧩','Cruzadinhas','3 jogos · conecte os conceitos'],['review','💡',`Rever dúvidas · ${pending().length}`,'Uma nova chance, com explicação'],['sim-intro','🎒','Simulado','12 questões · correção no final'],['notebook','📓','Caderno de descobertas','Explique com as suas palavras'],['lab','🌧️','Laboratório da chuva','Veja o caminho da água']].map(([a,e,t,d])=>`<button class="tool" data-action="${a}" data-i="0"><span class="tool-icon" aria-hidden="true">${e}</span><span><b>${t}</b><small>${d}</small></span></button>`).join('')}</div><p class="small muted" style="margin-top:22px">XP celebra suas descobertas. Errar não tira pontos: mostra o que vale investigar. Depois da rodada, faça uma pausa!</p>`);}
+function lesson(i){const m=DATA.missions[i];view(`<div class="narrow">${back()}<span class="eyebrow">Missão ${i+1} · Páginas ${m.pages}</span><h1 style="margin-top:12px">${m.icon} ${esc(m.title)}</h1><p class="muted">${esc(m.desc)} Primeiro, descubra as ideias. Depois, coloque-as em prática.</p><div class="lesson-grid">${m.facts.map(([t,d])=>`<article class="fact"><h3>${esc(t)}</h3><p>${esc(d)}</p></article>`).join('')}</div><div class="note"><strong>Desafio de explorador</strong><p>${esc(m.reflect)}</p></div>${profile().session&&!profile().session.finalized?'<p class="small muted">Começar estes desafios substitui a rodada em andamento. Seus acertos e pontos continuam guardados.</p>':''}<button class="primary" data-action="start-mission" data-i="${i}">Começar os 12 desafios</button><p class="small muted" style="margin-top:12px">Pode consultar estes conceitos quando precisar. Ler, tentar e explicar fazem parte da aventura.</p></div>`);}
+function startSession(ids,title,mode='practice',mission=null){const optionOrders={},values={};for(const id of ids){const q=QUESTIONS.find(q=>q.id===id);if(q.options)optionOrders[id]=shuffled(q.options);if(q.type==='order'){let a=shuffled(q.answer);if(grade(q,a))a=[...a.slice(1),a[0]];values[id]=a;}}profile().session={ids,title,mode,mission,index:0,responses:{},values,optionOrders,finalized:false};save();renderQuestion();}
+function current(){const s=profile().session;return {s,q:QUESTIONS.find(q=>q.id===s.ids[s.index])};}
+function source(q){return `Base: páginas ${q.pages} do livro.`;}
+function answerText(q){return Array.isArray(q.answer)?q.answer.join(q.type==='order'?' → ':'; '):q.answer;}
+function diagram(kind){if(kind==='chart')return `<figure class="chart"><figcaption><strong>Quem usa mais água?</strong><br><span class="small">Gráfico histórico da página 103 · fonte do livro: ANA, 2013</span></figcaption>${[['Agricultura e pecuária','82,8',82.8],['Abastecimento humano','10,6',10.6],['Indústria','6,7',6.7]].map(([l,v,n])=>`<div class="bar-row">${l}: <b>${v}%</b><span aria-hidden="true"><i style="width:${n}%"></i></span></div>`).join('')}<p class="small muted" style="margin:0">Valores do livro, não dados atuais. Pequena diferença na soma vem do arredondamento.</p></figure>`;
+if(kind==='map')return `<figure style="margin:15px 0"><svg class="diagram" viewBox="0 0 600 265" role="img" aria-label="Mapa fictício visto de cima: rio azul, morro verde, ponte sobre o rio, escola com símbolo de livro e mercado com cesta. A legenda indica livro igual a escola."><rect width="600" height="265" fill="#edf1df"/><path d="M0 139 Q160 86 310 143 T600 133" stroke="#82bfd8" stroke-width="44" fill="none"/><path d="M295 93v100" stroke="#bb8859" stroke-width="33"/><rect x="72" y="30" width="80" height="55" rx="9" fill="#ead095"/><text x="112" y="67" text-anchor="middle" font-size="29">📖</text><rect x="428" y="31" width="87" height="55" rx="9" fill="#d8b9dc"/><text x="472" y="67" text-anchor="middle" font-size="29">🧺</text><ellipse cx="124" cy="203" rx="53" ry="30" fill="#9ebc80"/><text x="124" y="209" text-anchor="middle" font-size="16" fill="#26372e">Morro</text><text x="330" y="184" font-size="15" fill="#333">Ponte</text><text x="456" y="144" font-size="15" fill="#193c55">Rio</text><text x="229" y="238" font-size="16" fill="#333">Legenda: 📖 Escola · 🧺 Mercado</text></svg><figcaption class="small muted">Bairro Curioso: mapa inventado para esta atividade. Cores e tamanhos ilustrativos.</figcaption></figure>`;
+return `<figure style="margin:15px 0"><svg class="diagram" viewBox="0 0 620 210" role="img" aria-label="Antes: uma casa e três árvores. Depois: três construções e uma árvore. A rua permaneceu no mesmo lugar."><rect width="620" height="210" fill="#eef0df"/><text x="145" y="29" text-anchor="middle" font-size="18" fill="#333">ANTES</text><text x="465" y="29" text-anchor="middle" font-size="18" fill="#333">DEPOIS</text><path d="M0 176h620" stroke="#aaaba4" stroke-width="28"/><path d="M310 10v187" stroke="#c9c4b5" stroke-width="2" stroke-dasharray="5 5"/><rect x="98" y="114" width="59" height="48" fill="#dfb270"/><path d="M90 115l38-35 38 35" fill="#b87460"/><g stroke="#806044" stroke-width="8"><path d="M48 158v-52m155 52V97m62 61v-52m87 52v-52"/></g><g fill="#82a87a"><circle cx="48" cy="93" r="27"/><circle cx="203" cy="82" r="31"/><circle cx="265" cy="93" r="25"/><circle cx="352" cy="93" r="27"/></g><rect x="405" y="91" width="48" height="70" fill="#d4b2d9"/><rect x="466" y="60" width="49" height="101" fill="#98bac4"/><rect x="530" y="105" width="64" height="56" fill="#e2b26d"/><g fill="#fff6de"><path d="M416 105h11v13h-11zm0 24h11v13h-11zm63-53h12v14h-12zm0 25h12v14h-12zm0 25h12v14h-12zm64-9h12v14h-12z"/></g></svg><figcaption class="small muted">Ilustração criada para comparar mudanças e permanências.</figcaption></figure>`;}
+function renderQuestion(){const {s,q}=current(),r=s.responses[q.id],value=s.values[q.id];view(`<div class="narrow">${back()}<div class="panel"><div class="row between"><span class="tag">${esc(s.title)}</span><span class="small muted">Desafio ${s.index+1} de ${s.ids.length}</span></div><div class="track" style="margin-top:18px"><span style="width:${s.index/s.ids.length*100}%"></span></div><h1 class="question-title" id="question-text">${esc(q.prompt)}</h1>${q.visual?diagram(q.visual):''}${q.type==='multi'?'<p class="small muted">Marque todas as respostas corretas e depois confira.</p>':''}<div id="answer-area">${questionInputs(q,value,!!r,s)}</div><div class="answer-actions"><button class="primary" data-action="submit-answer" ${r?'hidden':''}>${s.mode==='sim'?'Registrar resposta':'Conferir resposta'}</button></div><div id="feedback" aria-live="polite">${r?feedbackMarkup(s,q,r):''}</div>${r?`<button style="margin-top:18px" class="primary" data-action="next">${s.index===s.ids.length-1?'Ver resultado':'Próximo desafio'}</button>`:''}</div><details><summary>Consultar os conceitos da missão</summary>${s.mode==='sim'?'<p>Guarde a consulta para depois do simulado. Você pode sair para o mapa se quiser estudar primeiro.</p>':`<p>${DATA.missions.find(m=>m.questions.some(x=>x.id===q.id)).facts.map(([t,d])=>`<b>${esc(t)}:</b> ${esc(d)}`).join('</p><p>')}</p>`}</details></div>`);}
+function questionInputs(q,value,locked,s){if(q.type==='single'||q.type==='multi')return `<div class="choices" role="group" aria-labelledby="question-text">${s.optionOrders[q.id].map((v,i)=>{const on=q.type==='multi'?value?.includes(v):value===v;return `<button class="choice ${on?'selected':''}" data-action="choose" data-option="${i}" aria-pressed="${!!on}" ${locked?'disabled':''}><span class="marker" aria-hidden="true">${on?'✓':String.fromCharCode(65+i)}</span><span>${esc(v)}</span></button>`}).join('')}</div>`;if(q.type==='fill')return `<label class="label" for="fill-answer">Sua resposta</label><input id="fill-answer" type="text" autocomplete="off" spellcheck="false" maxlength="60" value="${esc(value||'')}" ${locked?'disabled':''}><p class="small muted" style="margin-top:7px">Pode escrever com ou sem acentos.</p>`;return `<p class="small muted">Use as setas para colocar as etapas na ordem. Depois confira.</p><ol class="order-list">${value.map((v,i)=>`<li class="order-item"><b>${i+1}.</b><span class="order-label">${esc(v)}</span><div class="row"><button data-action="move" data-i="${i}" data-dir="-1" aria-label="Subir etapa ${i+1}" ${locked||i===0?'disabled':''}>↑</button><button data-action="move" data-i="${i}" data-dir="1" aria-label="Descer etapa ${i+1}" ${locked||i===value.length-1?'disabled':''}>↓</button></div></li>`).join('')}</ol>`;}
+function feedbackMarkup(s,q,r){if(s.mode==='sim'&&!s.finalized)return '<div class="note">Resposta registrada. A explicação aparece no resultado final.</div>';return `<div class="feedback ${r.ok?'':'retry'}"><h3>${r.ok?'✓ Boa descoberta!':'↻ Vamos descobrir juntos!'}</h3><p><strong>${q.type==='order'?'Sequência':'Resposta'}:</strong> ${esc(answerText(q))}</p><p>${esc(q.explain)}</p><div class="source">${source(q)}</div></div>`;}
+function choose(i){const {s,q}=current();if(s.responses[q.id])return;const v=s.optionOrders[q.id][i];if(q.type==='multi'){const vals=s.values[q.id]||[];s.values[q.id]=vals.includes(v)?vals.filter(x=>x!==v):[...vals,v];}else s.values[q.id]=v;save();const area=document.getElementById('answer-area');area.innerHTML=questionInputs(q,s.values[q.id],false,s);area.querySelector(`[data-option="${i}"]`).focus({preventScroll:true});document.getElementById('feedback').textContent='';}
+function move(i,dir){const {s,q}=current();if(s.responses[q.id])return;const a=s.values[q.id],j=i+dir;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];save();document.getElementById('answer-area').innerHTML=questionInputs(q,a,false,s);document.querySelector(`[data-action="move"][data-i="${j}"][data-dir="${-dir}"]`)?.focus({preventScroll:true});}
+function submitAnswer(){const {s,q}=current();if(s.responses[q.id])return;const v=s.values[q.id];if(v===undefined||v===null||(typeof v==='string'&&!v.trim())||(Array.isArray(v)&&v.length===0)){document.getElementById('feedback').textContent=q.type==='fill'?'Escreva uma resposta antes de conferir.':'Escolha uma resposta antes de conferir.';return;}const ok=grade(q,v);s.responses[q.id]={value:Array.isArray(v)?[...v]:v,ok};if(s.mode!=='sim')record(q.id,ok);save();renderQuestion();document.querySelector('[data-action="next"]').focus({preventScroll:true});}
+function nextQuestion(){const {s,q}=current();if(!s.responses[q.id])return;if(s.index<s.ids.length-1){s.index++;save();renderQuestion();}else finishSession();}
+function finishSession(){const s=profile().session;if(!s.finalized){if(s.mode==='sim')for(const id of s.ids)record(id,s.responses[id].ok);s.finalized=true;save();}const right=s.ids.filter(id=>s.responses[id].ok).length;view(`<div class="narrow">${back()}<div class="panel tinted"><span class="eyebrow">${s.mode==='sim'?'Simulado concluído':'Rodada explorada'}</span><h1 style="margin-top:12px">Você conectou ideias!</h1><div class="result-score">${right} de ${s.ids.length}</div><p>respostas certas nesta rodada.</p><p>${right===s.ids.length?'Boa investigação! Agora tente explicar uma descoberta com as suas palavras.':'As dúvidas são pistas para o próximo passo. Leia as explicações e volte para praticar.'}</p>${s.mission!==null&&missionDone(s.mission)?'<p><span class="tag green">🏅 Selo desta missão conquistado!</span></p>':''}<div class="row"><button class="primary" data-action="review">Rever dúvidas · ${pending().length}</button><button data-action="notebook" data-i="${s.mission??0}">Explicar no caderno</button></div><p class="small" style="margin:18px 0 0">Vale uma pausa: levante, alongue o corpo e descanse os olhos. XP e acertos não são uma previsão da nota da prova.</p></div>${s.mission!==null?`<div class="note"><strong>Agora, sem olhar!</strong><p>${esc(DATA.missions[s.mission].reflect)}</p></div>`:''}<h2>As descobertas da rodada</h2><div class="results-list">${s.ids.map(id=>{const q=QUESTIONS.find(q=>q.id===id),r=s.responses[id];return `<article><span class="tag ${r.ok?'green':'gold'}">${r.ok?'✓ Acertou':'↻ Para revisar'}</span><h3 style="margin-top:12px">${esc(q.prompt)}</h3><p class="small muted">Sua resposta: ${esc(Array.isArray(r.value)?r.value.join(' → '):r.value)}</p><p><b>Resposta:</b> ${esc(answerText(q))}</p><p>${esc(q.explain)}</p><span class="small muted">${source(q)}</span></article>`}).join('')}</div></div>`);}
+function review(){const qs=pending();if(!qs.length)return view(`<div class="narrow">${back()}<div class="panel"><h1>💡 Nenhuma dúvida pendente</h1><p>Quando você errar uma questão, ela aparecerá aqui. Depois de acertar na revisão, ela sai desta lista.</p><button class="primary" data-action="home">Escolher uma missão</button></div></div>`);startSession(qs.map(q=>q.id),'Revisão das dúvidas','review');}
+function simIntro(){view(`<div class="narrow">${back()}<div class="panel"><span class="eyebrow">Uma preparação tranquila</span><h1 style="margin-top:12px">🎒 Simulado da expedição</h1><p>São <b>12 perguntas: duas de cada missão</b>. Leia com calma e registre sua resposta. Você verá os acertos e todas as explicações no final.</p><div class="note"><strong>Sem cronômetro, sem pressa.</strong><p>Tente responder sem consultar. Pode sair para o mapa e continuar depois no mesmo navegador.</p></div>${profile().session&&!profile().session.finalized?'<p class="small muted">Começar um simulado substitui a rodada em andamento. Acertos e pontos anteriores continuam salvos.</p>':''}<button class="primary" data-action="start-sim">Começar simulado</button></div></div>`);}
+const searchCache={};let activeSearch=0,firstCell=null,activeCross=0,activeNotebook=0;
+function makeSearch(k){if(searchCache[k])return searchCache[k];let seed=9487+k*5323;const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};const grid=Array(144).fill(''),paths={};for(const {word} of [...DATA.searches[k].words].sort((a,b)=>b.word.length-a.word.length)){const w=wordNorm(word);let placed=false;for(let t=0;t<4000;t++){const [dr,dc]=[[0,1],[1,0],[1,1]][Math.floor(random()*3)],r=Math.floor(random()*12),c=Math.floor(random()*12);if(r+dr*(w.length-1)>11||c+dc*(w.length-1)>11)continue;const p=Array.from(w,(_,i)=>(r+dr*i)*12+c+dc*i);if(!p.every((j,i)=>!grid[j]||grid[j]===w[i]))continue;p.forEach((j,i)=>grid[j]=w[i]);paths[w]=p;placed=true;break;}if(!placed)throw Error('Não foi possível montar o caça-palavras.');}for(let i=0;i<144;i++)if(!grid[i])grid[i]='ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(random()*26)];return searchCache[k]={grid,paths};}
+function searchView(k){activeSearch=k;firstCell=null;const p=DATA.searches[k],{grid}=makeSearch(k);view(`<div class="narrow">${back()}<div class="panel"><span class="eyebrow">Encontre a palavra, descubra a ideia</span><h1 class="question-title">🔎 Caça-palavras</h1><div class="tabs">${DATA.searches.map((p,i)=>`<button class="${i===k?'active':''}" data-action="search" data-i="${i}" aria-pressed="${i===k}">${p.title}</button>`).join('')}</div><p>Toque na <b>primeira</b> e na <b>última letra</b> da palavra. Vale na horizontal →, vertical ↓ ou diagonal ↘. Pode selecionar ao contrário também!</p><div class="puzzle-layout"><div class="letter-grid" role="group" aria-label="Tabuleiro de letras">${grid.map((c,i)=>`<button class="cell" data-action="cell" data-cell="${i}" aria-label="${c}, linha ${Math.floor(i/12)+1}, coluna ${i%12+1}">${c}</button>`).join('')}</div><div><div class="words">${p.words.map(w=>`<span class="word" data-word="${w.word}">${w.word}</span>`).join('')}</div><p class="small muted">Aqui as palavras ficam sem acentos: EROSAO = erosão, AGUA = água.</p><p id="word-count" class="small"></p><div class="row"><button data-action="hint-search">Uma pista</button><button data-action="cancel-search">Cancelar seleção</button></div></div></div><div id="puzzle-feedback" class="note" aria-live="polite">Escolha uma palavra da lista e procure suas letras.</div><p class="small muted">Conceitos das páginas ${p.pages}. Cada palavra descoberta vale 10 XP uma única vez.</p></div></div>`);paintSearch();}
+function paintSearch(){const {paths}=makeSearch(activeSearch),found=new Set();let count=0;for(const w of DATA.searches[activeSearch].words){const yes=!!profile().awards[`s:${activeSearch}:${w.word}`];if(yes){paths[w.word].forEach(i=>found.add(i));count++;}document.querySelector(`[data-word="${w.word}"]`).classList.toggle('done',yes);}document.querySelectorAll('[data-cell]').forEach(el=>{const i=Number(el.dataset.cell);el.classList.toggle('found',found.has(i));el.classList.toggle('start',i===firstCell);el.setAttribute('aria-pressed',String(i===firstCell));});document.getElementById('word-count').textContent=`${count} de 6 palavras encontradas${count===6?' · Tabuleiro completo! ⭐':''}`;}
+function selectCell(i){const notice=document.getElementById('puzzle-feedback');if(firstCell===null){firstCell=i;notice.textContent='Primeira letra marcada. Agora escolha a última.';paintSearch();return;}const a=firstCell,b=i;firstCell=null;const r1=Math.floor(a/12),c1=a%12,r2=Math.floor(b/12),c2=b%12;const dr=Math.sign(r2-r1),dc=Math.sign(c2-c1);if(a===b||!(r1===r2||c1===c2||Math.abs(r2-r1)===Math.abs(c2-c1))){notice.textContent='Procure uma linha reta: horizontal, vertical ou diagonal. Tente de novo!';paintSearch();return;}const length=Math.max(Math.abs(r2-r1),Math.abs(c2-c1))+1,{grid}=makeSearch(activeSearch);const path=Array.from({length},(_,j)=>(r1+dr*j)*12+c1+dc*j),text=path.map(j=>grid[j]).join('');const w=DATA.searches[activeSearch].words.find(w=>w.word===text||w.word===[...text].reverse().join(''));if(w){const fresh=award(`s:${activeSearch}:${w.word}`);notice.innerHTML=`<strong>${fresh?'✓ Descoberta!':'✓ Você reencontrou!'} ${esc(w.word)}</strong><p>${esc(w.concept)}</p>`;if(fresh)toast('+10 XP · Uma palavra, uma ideia!');}else notice.textContent='Essa sequência ainda não forma uma palavra da lista. Observe as letras e tente outra vez.';paintSearch();}
+function hintSearch(){const w=DATA.searches[activeSearch].words.find(w=>!profile().awards[`s:${activeSearch}:${w.word}`]);if(!w){document.getElementById('puzzle-feedback').textContent='Você já encontrou todas! Escolha outro tabuleiro.';return;}firstCell=makeSearch(activeSearch).paths[w.word][0];paintSearch();document.getElementById('puzzle-feedback').textContent=`Pista: marquei o começo de ${w.word}. ${w.concept} Agora procure a última letra.`;}
+function makeCrossword(k){const entries=DATA.crosswords[k].entries.map(e=>({...e})),starts=[...new Set(entries.map(e=>`${e.row},${e.col}`))].sort((a,b)=>{const [ar,ac]=a.split(',').map(Number),[br,bc]=b.split(',').map(Number);return ar-br||ac-bc;});entries.forEach(e=>e.number=starts.indexOf(`${e.row},${e.col}`)+1);return {entries,rows:Math.max(...entries.map(e=>e.row+(e.dir==='down'?e.word.length:1))),cols:Math.max(...entries.map(e=>e.col+(e.dir==='across'?e.word.length:1)))};}
+function crossView(k){activeCross=k;const p=DATA.crosswords[k],layout=makeCrossword(k);view(`<div class="narrow">${back()}<div class="panel"><span class="eyebrow">As ideias se cruzam</span><h1 class="question-title">🧩 Cruzadinhas</h1><div class="tabs">${DATA.crosswords.map((p,i)=>`<button class="${i===k?'active':''}" data-action="cross" data-i="${i}" aria-pressed="${i===k}">${p.title}</button>`).join('')}</div><p>Leia cada pista e escreva a palavra no campo abaixo dela. Suas letras aparecem no desenho. As palavras compartilham letras nos cruzamentos!</p><p class="small muted">Sem espaços e sem acentos. Cada palavra certa vale 10 XP uma vez. Uma letra laranja indica que duas respostas discordam no cruzamento.</p><div class="puzzle-layout"><div id="cross-drawing"></div><div>${p.words.map((w,i)=>{const e=layout.entries[i];return `<div class="clue"><label for="cross-${i}"><b>${e.number}. ${e.dir==='across'?'→ Horizontal':'↓ Vertical'}</b> · ${esc(w.clue)} <span class="muted">(${w.word.length} letras)</span></label><input type="text" data-cross-input="${i}" id="cross-${i}" value="${esc(profile().crossDrafts[`${k}:${i}`]||'')}" maxlength="${w.word.length+5}" autocomplete="off" spellcheck="false"><div class="answer-note" id="cross-note-${i}"></div></div>`}).join('')}<button class="primary" data-action="check-cross">Conferir palavras</button></div></div><div id="cross-feedback" class="note" aria-live="polite">Uma pista de cada vez. Use os cruzamentos para pensar!</div><p class="small muted">Base: páginas ${p.pages}.</p></div></div>`);paintCross();}
+function paintCross(){const {entries,rows,cols}=makeCrossword(activeCross),cells={};entries.forEach((e,j)=>{const value=wordNorm(profile().crossDrafts[`${activeCross}:${j}`]||'');for(let i=0;i<e.word.length;i++){const key=`${e.row+(e.dir==='down'?i:0)},${e.col+(e.dir==='across'?i:0)}`;cells[key]??={letters:[],number:null};if(i===0)cells[key].number=e.number;if(value[i])cells[key].letters.push(value[i]);}});document.getElementById('cross-drawing').innerHTML=`<div class="cross-grid" style="grid-template-columns:repeat(${cols},minmax(0,1fr))" role="img" aria-label="Cruzadinha com ${entries.length} palavras que se cruzam. Digite usando os campos das pistas.">${Array.from({length:rows*cols},(_,i)=>{const c=cells[`${Math.floor(i/cols)},${i%cols}`];return c?`<div class="cross-cell ${new Set(c.letters).size>1?'conflict':''}">${c.number?`<small>${c.number}</small>`:''}${esc(c.letters[0]||'')}</div>`:'<div class="cross-cell blank"></div>';}).join('')}</div>`;}
+function checkCross(){const p=DATA.crosswords[activeCross];let count=0;const found=[];p.words.forEach((w,i)=>{const value=wordNorm(profile().crossDrafts[`${activeCross}:${i}`]||''),ok=value===w.word;const note=document.getElementById(`cross-note-${i}`);if(ok){count++;award(`c:${activeCross}:${w.word}`);note.textContent='✓ '+w.concept;found.push(w.word);}else note.textContent=value?'↻ Ainda não. Releia a pista e confira as letras que se cruzam.':'Escreva sua ideia para conferir.';});document.getElementById('cross-feedback').textContent=`${count} de 5 palavras corretas nesta conferência. ${count===5?'Cruzadinha completa! Agora explique uma dessas palavras a alguém.': 'Continue investigando as pistas.'}`;paintCross();}
+function notebook(i=0){activeNotebook=i;const m=DATA.missions[i];view(`<div class="narrow">${back()}<div class="panel"><span class="eyebrow">Você também é professor por um minuto</span><h1 class="question-title">📓 Caderno de descobertas</h1><div class="tabs">${DATA.missions.map((m,j)=>`<button data-action="notebook" data-i="${j}" class="${i===j?'active':''}" aria-pressed="${i===j}">${j+1}. ${m.title}</button>`).join('')}</div><p class="reflect-prompt">${esc(m.reflect)}</p><label class="label" for="reflection">Minha explicação</label><textarea id="reflection" maxlength="3000" placeholder="Eu descobri que... porque...">${esc(profile().drafts[i]||'')}</textarea><p id="draft-status" class="save-state">${storageOK?'Salvo automaticamente neste navegador.':'Rascunho disponível apenas nesta sessão.'}</p><details><summary>Conferir minha explicação com um adulto</summary><ul class="checklist"><li>Eu expliquei a ideia, em vez de apenas dar um nome?</li><li>Dei um exemplo que combina com o assunto?</li><li>Contei uma causa e uma consequência, quando a pergunta pede?</li><li>Usei o livro para conferir o que ainda me deixou em dúvida?</li></ul><p class="small muted">Esta atividade não recebe correção automática nem XP. Uma resposta pode estar escrita de muitos jeitos. Converse sobre o sentido dela.</p></details><div class="note"><strong>Uma pista para sua conversa</strong><p>${esc(m.facts[0][1])}</p></div></div></div>`);}
+function lab(cover='garden'){const states={garden:{title:'Jardim com vegetação',icon:'🌱',color:'#92b78b',water:'Parte da chuva pode entrar no solo.',why:'A superfície permite infiltração. A vegetação também ajuda a proteger a terra. Nem toda a água é absorvida: isso depende da chuva e das condições do solo.'},paving:{title:'Chão coberto de cimento',icon:'🏘️',color:'#aaa9a2',water:'Mais água tende a escorrer pela superfície.',why:'A cobertura impermeável dificulta a passagem de água para o solo. Áreas verdes e pisos permeáveis ajudam a manter espaços de infiltração.'},bare:{title:'Encosta sem vegetação',icon:'⛰️',color:'#c69b78',water:'A chuva pode carregar terra encosta abaixo.',why:'O solo exposto fica mais sujeito à erosão. Em encostas, o encharcamento também pode favorecer deslizamentos. Preservar vegetação ajuda a reduzir riscos.'}};const s=states[cover];view(`<div class="narrow">${back()}<div class="panel"><span class="eyebrow">Laboratório de ideias · páginas 93–94</span><h1 class="question-title">🌧️ Para onde vai a chuva?</h1><p>Escolha uma superfície e compare. O desenho representa uma ideia; não é uma medição.</p><div class="tabs">${Object.entries(states).map(([k,v])=>`<button data-action="lab" data-cover="${k}" class="${k===cover?'active':''}" aria-pressed="${k===cover}">${v.icon} ${v.title}</button>`).join('')}</div><svg class="diagram" viewBox="0 0 600 250" role="img" aria-label="${esc(s.title+'. '+s.water)}"><rect width="600" height="250" fill="#e9f2f5"/><text x="290" y="60" text-anchor="middle" font-size="49">🌧️</text><path d="M140 77l-8 27m75-27-8 27m75-27-8 27m75-27-8 27m75-27-8 27" stroke="#6aabc4" stroke-width="4" stroke-linecap="round"/><path d="${cover==='bare'?'M0 123L600 213V250H0Z':'M0 157H600V250H0Z'}" fill="${s.color}"/>${cover==='garden'?'<text x="112" y="151" font-size="35">🌱</text><text x="417" y="151" font-size="35">🌱</text><path d="M220 145v63m-10-12 10 12 10-12m100-51v63m-10-12 10 12 10-12" stroke="#307898" stroke-width="5" fill="none"/>':`<path d="${cover==='bare'?'M210 144l230 36-18-18m18 18-25 8':'M180 142h270l-17-13m17 13-17 13'}" stroke="#307898" stroke-width="5" fill="none"/>`}</svg><div class="note" aria-live="polite"><strong>${s.water}</strong><p>${s.why}</p></div><p><b>Conte para alguém:</b> o que muda no caminho da chuva quando trocamos um jardim por cimento?</p><p class="small muted">Exploração livre, sem pontos. Observe o que acontece e use a ideia nas missões.</p></div></div>`);}
+function guide(){view(`<div class="narrow">${back()}<div class="panel"><h1 class="question-title">Guia da família</h1><p>Proposta para o 3º ano: uma missão por rodada, com previsão de <b>15–20 minutos</b>, ajustada ao ritmo da criança. Comece pelos conceitos, faça os desafios e termine com uma explicação oral ou escrita. Depois, vale uma pausa.</p><h2>O que tem nesta expedição</h2><p>72 questões em seis missões; três caça-palavras com seis termos cada; três cruzadinhas com cinco pistas cada; laboratório da chuva; caderno de descobertas; revisão de dúvidas; simulado de 12 questões retiradas do banco, duas por missão.</p><h2>Base do conteúdo</h2><p>Comunicado de avaliação em 2/10 e 27 páginas fotografadas (IMG_8499 a IMG_8526): <b>82–91, 93–103 e 164–169</b>. Temas: trabalho e paisagens; solo, uso e degradação; água, importância e conservação. As perguntas e ilustrações são originais. As respostas manuscritas não foram tratadas como gabarito.</p><p class="small">O mapa do Bairro Curioso e a comparação de paisagens são ilustrações didáticas fictícias. Os percentuais do gráfico reproduzem o material da página 103, com fonte de 2013; não representam dados atuais. As páginas 92 e anotações de caderno não fornecidas não foram acrescentadas.</p><h2>Aprender com a tentativa</h2><p>Peça que a criança explique o porquê da resposta. As alternativas misturam conceitos próximos para incentivar a leitura. Erros recebem explicação e vão para “Rever dúvidas”; um acerto posterior os retira da lista. Acertar depois de revisar faz parte da aprendizagem.</p><h2>Como os pontos funcionam</h2><p>Cada questão, palavra do caça-palavras ou pista da cruzadinha acertada rende <b>10 XP uma única vez</b>. Erros não tiram pontos. Os seis selos são concedidos quando todas as 12 questões de cada missão já foram acertadas. Progresso das questões e dos jogos aparece separado. O laboratório e o caderno são livres e não dão XP. A pontuação não é nota escolar nem previsão de desempenho na prova.</p><h2>Perfis e progresso</h2><p>Nome ou apelido, respostas, rodada e rascunhos ficam neste navegador, quando o armazenamento está disponível. Não há envio de dados nem cadastro. Use apelidos distintos para crianças com o mesmo nome. Use uma aba de estudo por vez: alterações simultâneas em várias abas não são mescladas.</p><p>Trocar de navegador, aparelho ou endereço do arquivo pode separar o progresso. Limpar os dados do navegador pode apagá-lo. Se não for possível salvar, um aviso fica visível e a criança ainda pode jogar durante a sessão.</p><details open><summary>Apagar o perfil de ${esc(profile().name)}</summary><p>A exclusão remove apenas este perfil, suas respostas, pontos e rascunhos deste navegador.</p><button class="danger" data-action="reset-ask">Apagar este perfil…</button><div id="reset-confirm" hidden class="note warm"><p>Quer apagar este perfil e começar do zero? Os outros exploradores serão mantidos.</p><div class="row"><button class="danger" data-action="reset-confirm">Sim, apagar meu perfil</button><button data-action="reset-cancel">Cancelar</button></div></div></details></div></div>`);}
+document.addEventListener('submit',e=>{if(e.target.id==='name-form'){e.preventDefault();enter(document.getElementById('child-name').value);}});
+document.addEventListener('input',e=>{if(!profile())return;const el=e.target;if(el.id==='fill-answer'){const {s,q}=current();s.values[q.id]=el.value;save();}if(el.hasAttribute('data-cross-input')){profile().crossDrafts[`${activeCross}:${el.dataset.crossInput}`]=el.value;save();paintCross();const n=document.getElementById(`cross-note-${el.dataset.crossInput}`);if(n)n.textContent='';}if(el.id==='reflection'){profile().drafts[activeNotebook]=el.value;save();document.getElementById('draft-status').textContent=storageOK?'Salvo neste navegador.':'Disponível apenas nesta sessão.';}});
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-action]');if(!b||b.disabled)return;const a=b.dataset.action,i=Number(b.dataset.i||0);if(a==='resume-profile'){store.active=b.dataset.id;save();home();return;}if(a==='switch')return welcome();if(!profile())return;
+switch(a){case'home':home();break;case'guide':guide();break;case'lesson':lesson(i);break;case'start-mission':startSession(DATA.missions[i].questions.map(q=>q.id),DATA.missions[i].title,'practice',i);break;case'continue':renderQuestion();break;case'choose':choose(Number(b.dataset.option));break;case'move':move(i,Number(b.dataset.dir));break;case'submit-answer':submitAnswer();break;case'next':nextQuestion();break;case'review':review();break;case'sim-intro':simIntro();break;case'start-sim':startSession(DATA.missions.flatMap(m=>shuffled(m.questions.filter(q=>q.type==='single')).slice(0,2).map(q=>q.id)),'Simulado','sim');break;case'search':searchView(i);break;case'cell':selectCell(Number(b.dataset.cell));break;case'hint-search':hintSearch();break;case'cancel-search':firstCell=null;paintSearch();document.getElementById('puzzle-feedback').textContent='Seleção cancelada. Escolha uma primeira letra.';break;case'cross':crossView(i);break;case'check-cross':checkCross();break;case'notebook':notebook(i);break;case'lab':lab(b.dataset.cover||'garden');break;case'reset-ask':document.getElementById('reset-confirm').hidden=false;document.querySelector('[data-action="reset-confirm"]').focus();break;case'reset-cancel':document.getElementById('reset-confirm').hidden=true;document.querySelector('[data-action="reset-ask"]').focus();break;case'reset-confirm':store.profiles=store.profiles.filter(p=>p.id!==store.active);store.active=null;save();welcome();break;}});
+if(profile())home();else welcome();
+
+</script>
+</body>
+</html>
