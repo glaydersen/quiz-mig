@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf7ef">
+  <meta name="description" content="O cantinho de estudos do Miguel: próximos quizzes e aventuras passadas de Ciências, Português e Matemática.">
+  <title>Clube do Miguel · Quizzes e descobertas</title>
+  <style>
+    :root { color-scheme: light; --paper: #faf7ef; --ink: #29283d; --muted: #646171; --purple: #6143b5; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: ui-rounded, "Avenir Next", "Trebuchet MS", sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--purple); outline-offset: 6px; }
+    .skip { position: absolute; top: -100px; left: 20px; z-index: 10; padding: 10px 20px; background: white; }
+    .skip:focus { top: 10px; }
+    .container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; border-bottom: 1px solid #e5e0d6; }
+    .brand { display: flex; align-items: center; gap: 11px; font-size: 20px; font-weight: 800; text-decoration: none; letter-spacing: -.6px; }
+    .brand-icon { display: grid; place-items: center; width: 40px; height: 40px; background: #ffcb66; border-radius: 13px; color: #493522; font-size: 27px; transform: rotate(-8deg); }
+    nav { display: flex; gap: 26px; }
+    nav a { font-size: 14px; text-decoration: none; font-weight: 700; padding-block: 8px; }
+    nav a:hover { color: var(--purple); text-decoration: underline; text-underline-offset: 5px; }
+    .intro { display: grid; grid-template-columns: 1.3fr 1fr; align-items: center; gap: 28px; padding-block: 58px 44px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #dc714b; }
+    h1 { font-size: clamp(38px, 5.3vw, 62px); line-height: 1.1; letter-spacing: -2.5px; margin: 18px 0; }
+    h1 span { color: var(--purple); }
+    .intro p { color: var(--muted); max-width: 440px; font-size: 17px; margin: 0; }
+    .art { width: 100%; max-width: 380px; justify-self: center; transform: rotate(-3deg); }
+    section { scroll-margin-top: 24px; }
+    .section-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    h2 { font-size: 25px; line-height: 1.25; letter-spacing: -.8px; margin: 0; }
+    .section-number { color: var(--purple); background: #ebe5f7; border-radius: 10px; padding: 4px 10px; font-size: 13px; font-weight: 800; }
+    .upcoming { position: relative; overflow: hidden; display: flex; align-items: center; gap: 28px; padding: 34px 38px; border-radius: 24px; background: #eee7fc; border: 1px solid #ded2f3; }
+    .upcoming-icon { flex: 0 0 90px; height: 90px; border-radius: 25px; display: grid; place-items: center; font-size: 43px; background: #fffaf0; box-shadow: 4px 5px 0 #d6c8ee; transform: rotate(-7deg); }
+    .status { display: inline-block; background: #fffaf0; color: #63478c; border-radius: 30px; padding: 4px 11px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+    .upcoming h3 { font-size: 25px; line-height: 1.3; margin: 10px 0 6px; letter-spacing: -.6px; }
+    .upcoming p { color: #625374; margin: 0; max-width: 540px; }
+    .sparkle { margin-left: auto; font-size: 66px; color: #9373c6; padding-inline: 16px; }
+    .start-quiz { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; padding: 11px 19px; background: var(--purple); color: white; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 14px; }
+    .start-quiz:hover { background: #4e3498; }
+    .archive { padding-block: 46px 64px; }
+    .archive-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
+    .archive-header .section-heading { margin-bottom: 8px; }
+    .archive-header p { margin: 0; color: var(--muted); font-size: 15px; }
+    .count { white-space: nowrap; font-size: 12px; font-weight: 700; border: 1px solid #ddd7cb; padding: 6px 12px; border-radius: 20px; margin-top: 2px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .card { display: flex; flex-direction: column; position: relative; min-width: 0; padding: 25px; background: #fffefa; border: 1px solid #e5dfd5; border-radius: 20px; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px #3024420d; }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 23px; }
+    .card-icon { display: grid; place-items: center; width: 57px; height: 57px; border-radius: 17px; background: var(--tint); font-size: 29px; }
+    .subject { color: var(--accent); background: var(--tint); border-radius: 20px; padding: 4px 10px; font-size: 11px; font-weight: 800; }
+    .science { --tint: #dff1e7; --accent: #286449; }
+    .language { --tint: #eee6fb; --accent: #684399; }
+    .math { --tint: #ffebce; --accent: #875012; }
+    .card h3 { font-size: 21px; letter-spacing: -.5px; line-height: 1.3; margin: 0 0 10px; }
+    .card p { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+    .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; border-top: 1px solid #eee9df; padding-top: 17px; }
+    .card-detail { color: var(--muted); font-size: 12px; }
+    .card-cta { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 800; color: var(--accent); }
+    footer { border-top: 1px solid #e5e0d6; padding-block: 23px 30px; display: flex; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--muted); }
+    footer span:first-child { font-weight: 700; color: var(--ink); }
+    @media (max-width: 850px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sparkle { display: none; } }
+    @media (max-width: 580px) {
+      .container { width: calc(100% - 32px); }
+      header { flex-direction: column; gap: 12px; padding-block: 20px 16px; }
+      nav { gap: 24px; }
+      .intro { grid-template-columns: 1fr; gap: 12px; padding-block: 35px 30px; }
+      h1 { letter-spacing: -1.6px; }
+      .art { max-width: 245px; }
+      h2 { font-size: 22px; }
+      .upcoming { padding: 25px; gap: 20px; align-items: flex-start; flex-direction: column; }
+      .upcoming-icon { flex-basis: auto; width: 60px; height: 60px; font-size: 30px; border-radius: 18px; }
+      .upcoming h3 { font-size: 23px; }
+      .archive-header { flex-direction: column; gap: 12px; }
+      .grid { grid-template-columns: 1fr; }
+      .archive { padding-block: 34px 40px; }
+      footer { flex-direction: column; gap: 4px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .card { transition: none; } .card:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="container">
+    <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✦</span> Clube do Miguel</a>
+    <nav aria-label="Navegação principal">
+      <a href="#proximos">Quizzes atuais</a>
+      <a href="#passados">Quizzes passados</a>
+    </nav>
+  </header>
+  <main id="conteudo" class="container">
+    <div class="intro">
+      <div>
+        <div class="eyebrow">Seu cantinho de descobertas</div>
+        <h1>Oi, Miguel!<br>Vamos <span>aprender?</span></h1>
+        <p>Cada pergunta é uma nova descoberta. Escolha uma aventura e deixe a curiosidade te levar!</p>
+      </div>
+      <svg class="art" viewBox="0 0 400 270" fill="none" aria-hidden="true">
+        <ellipse cx="204" cy="143" rx="157" ry="108" fill="#f0e9dc"/>
+        <path d="M65 67l5-16 5 16 16 5-16 5-5 16-5-16-16-5z" fill="#e29159"/>
+        <path d="M333 167l4-13 4 13 13 4-13 4-4 13-4-13-13-4z" fill="#8061b1"/>
+        <circle cx="310" cy="56" r="12" fill="#b4d9c7"/>
+        <path d="M87 198l-10 12m236-102 15-5M179 33l-4-14" stroke="#ad9bbc" stroke-width="5" stroke-linecap="round"/>
+        <g transform="rotate(9 210 145)">
+          <rect x="100" y="87" width="215" height="144" rx="14" fill="#d2c0e8"/>
+          <path d="M107 81q48-15 100 8v133q-47-22-100-9z" fill="#fffdf5" stroke="#665086" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M207 89q50-23 100-8v132q-51-9-100 9z" fill="#fff3d8" stroke="#665086" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M128 109q29-3 56 7m-56 11q29-3 56 7m-56 11q22-3 41 3" stroke="#d4c4de" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="247" cy="131" r="5" fill="#665086"/><circle cx="276" cy="128" r="5" fill="#665086"/>
+          <path d="M251 149q13 12 24-2" stroke="#665086" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="237" cy="146" rx="8" ry="4" fill="#f4bba0"/><ellipse cx="287" cy="141" rx="8" ry="4" fill="#f4bba0"/>
+          <path d="M233 181l46-5m-46 19 32-4" stroke="#e5cc93" stroke-width="5" stroke-linecap="round"/>
+          <path d="M151 85v37l11-7 10 10V86" fill="#8cbca8"/>
+        </g>
+        <g transform="rotate(-20 294 69)"><rect x="283" y="18" width="19" height="87" rx="5" fill="#f3ba55"/><path d="M283 99l9.5 25L302 99" fill="#e1bd93"/><path d="M289 114l3.5 10 4-10" fill="#524259"/><path d="M283 34h19" stroke="#fff3d8" stroke-width="7"/></g>
+        <path d="M52 140l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="#eabd59"/>
+      </svg>
+    </div>
+
+    <section id="proximos" aria-labelledby="proximos-titulo">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">01</span><h2 id="proximos-titulo">Quizzes atuais e próximos</h2></div>
+      <div class="upcoming">
+        <div class="upcoming-icon" aria-hidden="true">🌎</div>
+        <div><span class="status">Quiz atual · Prova de 2/10</span><h3>Expedição Geografia</h3><p>Paisagens, trabalho, solo e água: seis missões com perguntas, caça-palavras, cruzadinhas e muitas descobertas!</p><a class="start-quiz" href="quiz-geografia-2026.10.02.html">Começar a expedição <span aria-hidden="true">→</span></a></div>
+        <span class="sparkle" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <section id="passados" class="archive" aria-labelledby="passados-titulo">
+      <div class="archive-header">
+        <div><div class="section-heading"><span class="section-number" aria-hidden="true">02</span><h2 id="passados-titulo">Quizzes passados</h2></div><p>Aventuras que já fizeram parte dos seus estudos. Vale jogar de novo!</p></div>
+        <span class="count">6 quizzes para revisitar</span>
+      </div>
+      <div class="grid">
+        <a class="card science" href="quiz-ciencia-2026.09-v2.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">🔬</span><span class="subject">Ciências</span></div>
+          <h3>SuperSentidos · V2</h3><p>Mais descobertas sobre os sentidos e a luz, com jogos e desafios para explorar.</p>
+          <div class="card-bottom"><span class="card-detail">150 desafios</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card science" href="quiz-ciencias-2026.09.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">💡</span><span class="subject">Ciências</span></div>
+          <h3>Operação SuperSentidos</h3><p>Uma aventura para conhecer os sentidos e investigar o mundo da luz.</p>
+          <div class="card-bottom"><span class="card-detail">Setembro de 2026</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card language" href="quiz-portugues-2026.09.10.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">✏️</span><span class="subject">Português</span></div>
+          <h3>Missão Português</h3><p>Explore palavras, pratique a escrita e conte um pedacinho da sua história.</p>
+          <div class="card-bottom"><span class="card-detail">10 de setembro de 2026</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card math" href="quiz-divisao.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">🧩</span><span class="subject">Matemática</span></div>
+          <h3>A Super Aventura da Divisão</h3><p>Descubra as ideias da divisão e avance pelas fases, uma conquista de cada vez.</p>
+          <div class="card-bottom"><span class="card-detail">8 fases · 38 desafios</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card language" href="quiz_portugues_9_anos_corrigido.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">📚</span><span class="subject">Português</span></div>
+          <h3>Quiz de Português</h3><p>Uma rodada de revisão para treinar seus conhecimentos e se preparar para a prova.</p>
+          <div class="card-bottom"><span class="card-detail">9 anos · 30 questões</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card math" href="quiz.html">
+          <div class="card-top"><span class="card-icon" aria-hidden="true">🔢</span><span class="subject">Matemática</span></div>
+          <h3>Quiz de Multiplicação</h3><p>Coloque a tabuada em prática e exercite suas descobertas com os números.</p>
+          <div class="card-bottom"><span class="card-detail">Treino de multiplicação</span><span class="card-cta">Revisitar <span aria-hidden="true">↗</span></span></div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="container"><span>Clube do Miguel <span aria-hidden="true">✦</span></span><span>Aprender, tentar de novo e descobrir. No seu ritmo.</span></footer>
+</body>
+</html>

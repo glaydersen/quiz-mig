@@ -5,4 +5,4 @@
 - AD-002: Usuário confirmou escopo integral das fotos, perfis locais e ritmo 15–20 minutos.
 
 ## Handoff
-Geografia em execução: fontes lidas, plano e critérios registrados em features/geografia. Próximo: construir e testar quiz e integrar home. Home da tarefa anterior ainda não commitada, preservar.
+Quiz de Geografia e integração da home implementados. Gates passaram: 249 verificações e suite de atividades completas. Próximo: verificador independente, relatório e apresentação do resultado. Fontes e especificação em features/geografia. Demais quizzes não alterados.

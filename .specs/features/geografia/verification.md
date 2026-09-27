@@ -17,3 +17,6 @@ Gate inicial: `node tests/geografia.mjs` com Playwright disponível por PLAYWRIG
 Mapeamento reverso: asserções de corpus → GEO-02/05; correção → GEO-03; pontuação → GEO-04; perfis/rascunhos → GEO-01/06; jogos → GEO-05; simulado → GEO-06; robustez/UI → GEO-07; links → GEO-08. Não há testes sem requisito. Nenhuma asserção foi enfraquecida ou removida.
 
 A inspeção visual encontrou o perfil muito estreito no cabeçalho móvel. Corrigido para ocupar sua própria linha. Botões das missões têm texto curto com nome acessível completo. Novo teste de atividades passou após os ajustes.
+
+## T2 — Integração da home
+`CHECK_HOME=1 node tests/geografia.mjs`: 249 verificações passaram. `CHECK_HOME=1 node tests/geografia-activities.mjs`: passou. `tests/geografia-activities.mjs:56` verifica exatamente seis cartões passados, abre o quiz pela seção atual e retorna pela marca; `tests/geografia.mjs:118` verifica existência de todos os HTML vinculados. `git diff --check`: limpo.
