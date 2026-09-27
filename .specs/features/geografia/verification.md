@@ -20,3 +20,6 @@ A inspeção visual encontrou o perfil muito estreito no cabeçalho móvel. Corr
 
 ## T2 — Integração da home
 `CHECK_HOME=1 node tests/geografia.mjs`: 249 verificações passaram. `CHECK_HOME=1 node tests/geografia-activities.mjs`: passou. `tests/geografia-activities.mjs:56` verifica exatamente seis cartões passados, abre o quiz pela seção atual e retorna pela marca; `tests/geografia.mjs:118` verifica existência de todos os HTML vinculados. `git diff --check`: limpo.
+
+## Correção F1 — GEO-07
+O Verifier identificou JSON parseável com sessão inválida. O carregamento agora valida mapas, IDs e estrutura de rodada antes de atribuir o estado; inválidos preservam o raw e mostram aviso, usando memória temporária. `tests/geografia-storage.mjs:22–31` exige aviso, ausência de retomada inválida, perfil temporário funcional, resposta com 10 XP e raw inalterado em seis corrupções. :39–43 confirma retomada exata de rascunhos válidos nos três formatos. Reexecutadas suites principais após o ajuste: 249 verificações e atividades passaram; regressão de persistência passou.
