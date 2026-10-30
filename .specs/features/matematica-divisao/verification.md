@@ -28,3 +28,6 @@ Gates: `node tests/matematica.mjs` e `node tests/matematica-complete.mjs`. Ambos
 | matematica-complete.mjs:26–27 | AC4 indisponibilidade de armazenamento | Sim |
 
 Adequação: testes ligados ao escopo; sem mocks de resultados nem testes antigos removidos. O teste de gabarito independente complementa o teste unitário que usa o banco. Sem diretrizes de testes locais adicionais. Revisão humana da pedagogia e do visual é complementar aos testes; não houve UAT com o usuário.
+
+## Etapa 2 — home
+Gate `node tests/matematica-home.mjs`: PASS. AC6: tests/matematica-home.mjs:5 `assert.match(current,/href="quiz-matematica-2026.10.30.html"/)`; :6 `assert.equal(archived.length,7)` e `assert.ok(archived.includes('quiz-geografia-2026.10.02.html'))`; :7 testa todos os HTML locais. Mapeamento reverso: todas as assertivas deste arquivo correspondem à integração da home em AC6. Os testes históricos de Geografia permanecem intactos; CHECK_HOME de geografia.mjs é uma fotografia da entrega anterior, portanto a home atual é verificada pela suíte de Matemática.
