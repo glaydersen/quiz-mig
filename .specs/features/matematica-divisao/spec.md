@@ -31,3 +31,10 @@ IMG_8671–8690 correspondem, na ordem, às páginas 230–249.
 
 ## Limites
 Duração é estimativa, varia por criança. Reflexão livre usa comparação com exemplo, não avaliação semântica. Progresso fica somente no navegador. Estimativas indicam explicitamente qual arredondamento usar para evitar múltiplos gabaritos implícitos.
+
+## Comandos de verificação
+- `node tests/matematica.mjs`: conteúdo, regras de correção, navegação, perfis, retomada, revisão, oficinas e corrupção.
+- `node tests/matematica-complete.mjs`: 48 problemas resolvidos com gabarito independente, teclado, celular, autoria e armazenamento indisponível.
+- `node tests/matematica-edge.mjs`: entradas inválidas, limites, resposta concluída persistida e sessão corrompida.
+- `node tests/matematica-home.mjs`: destaque atual e todos os arquivos anteriores.
+Os testes usam Node, Playwright e Chrome em perfil temporário; o quiz não depende deles. `QUIZ_ROOT` aponta uma cópia temporária para os sensores. `PLAYWRIGHT_MODULE` aceita o caminho para package.json de outra instalação de Playwright.
