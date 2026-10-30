@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf7ed">
+<title>Missão Divisão · Clube do Miguel</title>
+<style>
+:root{color-scheme:light;--ink:#283d3c;--muted:#596a65;--paper:#fbf7ed;--green:#166452;--line:#dedfd2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next","Trebuchet MS",sans-serif;font-size:17px;line-height:1.6}button,input,textarea,select{font:inherit}button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer;border:0;border-radius:14px;background:var(--green);color:white;font-weight:800;padding:13px 21px;min-height:48px;line-height:1.4}button:hover{filter:brightness(.94)}button:disabled{cursor:default;opacity:.65}a{color:var(--green)}:focus-visible{outline:3px solid #a64d00;outline-offset:4px}main:focus{outline:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:23px 0;border-bottom:1px solid var(--line)}.brand{font-weight:900;text-decoration:none;letter-spacing:-.5px;font-size:19px}.brand span{background:#f6cd67;border-radius:10px;padding:6px 10px;margin-right:7px}.top-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}#profile{font-size:14px;max-width:360px;overflow-wrap:anywhere}.smallbtn{padding:8px 13px;font-size:14px;min-height:42px;background:#e8eee6;color:var(--green)}main{padding:34px 0 60px}.eyebrow{font-size:12px;letter-spacing:1.7px;text-transform:uppercase;font-weight:900;color:#507269}h1,h2,h3{line-height:1.18;letter-spacing:-1px}h1{font-size:clamp(30px,4.6vw,52px);margin:14px 0 20px}h2{font-size:28px}h3{font-size:22px}.muted{color:var(--muted)}.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;padding-bottom:26px}.hero p{max-width:540px}.hero-art{width:100%;max-width:330px;justify-self:center}.pill{display:inline-block;font-size:12px;font-weight:800;border:1px solid #d7ddce;border-radius:99px;padding:4px 12px;margin:0 6px 8px 0}.panel{background:#fffef9;border:1px solid var(--line);border-radius:24px;padding:30px;margin-bottom:24px}.login{max-width:610px;margin:20px auto}.login h1{font-size:42px}.stack{display:grid;gap:14px}label{display:block;font-weight:700}input,textarea,select{width:100%;color:var(--ink);background:white;border:2px solid #adbdb1;border-radius:12px;padding:12px;margin-top:7px;min-width:0}textarea{min-height:100px;resize:vertical}input:disabled,textarea:disabled{background:#f1f3e9;color:#34443b}input[type=radio]{width:22px;min-width:22px;height:22px;margin:0;accent-color:var(--green)}.welcome{background:#dcefe4;border-color:#b7d8c5;display:flex;gap:24px;justify-content:space-between;align-items:center}.welcome h2{margin:8px 0 10px}.welcome p{margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.secondary{background:#ebe6f7;color:#584582}.plain{background:transparent;color:var(--green);border:1px solid #b6c8bb}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tile{display:flex;flex-direction:column;background:#fffef9;border:1px solid var(--line);border-radius:21px;padding:24px}.tile h3{margin:16px 0 10px}.tile p{font-size:15px;margin:0 0 18px}.tile button{margin-top:auto;background:transparent;color:var(--green);padding:10px 0;text-align:left}.tile .icon{font-size:30px;display:grid;place-items:center;background:var(--tint);width:58px;height:58px;border-radius:18px}.mint{--tint:#dcefe4}.peach{--tint:#f9dfc5}.pink{--tint:#f6dfe4}.yellow{--tint:#f8eab1}.lavender{--tint:#e6dff5}.blue{--tint:#dcebf5}.tile progress{width:100%;height:7px;accent-color:var(--green)}.progressline{display:flex;justify-content:space-between;gap:15px;font-size:13px;color:var(--muted);margin:13px 0 4px}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin:36px 0 18px}.section-title h2{margin:0}.tools{margin-top:24px}.tools .tile{background:#f1eee1}.session{max-width:800px;margin:auto}.session h1{font-size:clamp(25px,3.3vw,34px);line-height:1.35;letter-spacing:-.6px}.session progress{width:100%;accent-color:var(--green);height:9px}.back{margin-bottom:22px;background:transparent;color:var(--green);padding:8px 0;min-height:44px}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:24px 0}.option{display:flex;gap:14px;align-items:center;font-weight:600;background:#fff;border:2px solid #dce4d9;padding:15px;border-radius:14px;margin-bottom:10px;cursor:pointer}.option:has(input:checked){border-color:var(--green);background:#eaf4ec}.option:has(input:focus-visible){outline:3px solid #a64d00;outline-offset:3px}fieldset{border:0;padding:0;margin:20px 0}legend{font-weight:800;margin-bottom:13px}.feedback{border-radius:16px;padding:20px;background:#e8f4e8;margin-top:22px}.feedback.error{background:#fff0db;border:1px solid #e8c190}.feedback h2{font-size:23px;margin:0 0 9px}.feedback p{margin:0}.feedback:empty{display:none}details{border:1px dashed #b4c8b9;border-radius:13px;padding:12px 17px;margin:20px 0}summary{cursor:pointer;font-weight:800;color:var(--green)}.note{font-size:14px;color:var(--muted)}.notice{background:#fff0d6;border:1px solid #e4bd7f;padding:12px 18px;border-radius:12px;margin-top:20px}.notice:empty{display:none}.stats{display:flex;gap:16px;flex-wrap:wrap}.stat{padding:20px 25px;border-radius:18px;background:#e6f0e5}.stat strong{font-size:30px;display:block}.groupbox{background:white;border:1px solid #c9d8cb;border-radius:12px;padding:14px;margin:8px 0}.blocks{display:flex;gap:5px;flex-wrap:wrap;align-items:center}.block{display:inline-block;background:#edbe49;border:1px solid #93722d}.hundred{width:36px;height:36px;background:repeating-linear-gradient(0deg,transparent,transparent 3px,#ba8d2833 3px,#ba8d2833 4px),repeating-linear-gradient(90deg,#f9d46a,#f9d46a 3px,#ba8d28 3px,#ba8d28 4px)}.ten{width:9px;height:36px;background:repeating-linear-gradient(#f9d46a,#f9d46a 3px,#ba8d28 3px,#ba8d28 4px)}.one{width:9px;height:9px}.equation{font-size:26px;font-weight:900;background:#f5edcf;border-radius:14px;padding:20px;margin:20px 0}.steps li{padding-bottom:13px}.cross{display:grid;grid-template-columns:repeat(3,65px);gap:5px;margin:25px auto;width:max-content}.cross input{text-align:center;font-size:25px;height:65px;padding:5px;margin:0}.clues{display:grid;grid-template-columns:1fr 1fr;gap:20px}.chart{width:100%;max-width:370px;display:block;margin:20px auto}.finish{text-align:center;padding:30px 0}.finish .stats{justify-content:center}.skip{position:absolute;left:15px;top:-100px;background:white;padding:12px;z-index:10}.skip:focus{top:10px}footer{border-top:1px solid var(--line);padding:23px 0;font-size:13px;color:var(--muted)}.badge{color:#775200;background:#fff0bb;border-radius:13px;padding:8px 14px;display:inline-block;margin-top:10px}noscript{display:block;padding:25px}.saved-names{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}.saved-names button{max-width:100%;overflow-wrap:anywhere}.longdiv{font-family:ui-monospace,monospace;white-space:pre;font-size:22px;line-height:1.5;background:#f0f3e8;border-radius:14px;padding:20px;overflow:auto}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr 220px}.welcome{align-items:flex-start;flex-direction:column}}
+@media(max-width:580px){.wrap{width:calc(100% - 28px)}header{padding:17px 0}.top-actions{width:100%;justify-content:space-between}#profile{max-width:220px}.hero{grid-template-columns:1fr;gap:0}.hero-art{max-width:210px;grid-row:2}.hero h1{margin-top:9px}.grid{grid-template-columns:1fr}.panel{padding:21px;border-radius:19px}.section-title{display:block}.section-title .note{display:block;margin-top:8px}.login h1{font-size:34px}.fields{grid-template-columns:1fr}.actions button{flex:1 1 auto}.clues{grid-template-columns:1fr;gap:0}.equation{font-size:22px}.session h1{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head>
+<body><a class="skip" href="#main">Pular para o conteúdo</a><div class="wrap"><header><a class="brand" href="index.html"><span aria-hidden="true">÷</span> Clube do Miguel</a><div class="top-actions"><span id="profile"></span><button id="switch" class="smallbtn" hidden>Trocar jogador</button></div></header><div id="notice" class="notice" role="status"></div><main id="main" tabindex="-1"></main><footer>Feito para pensar, tentar e descobrir. • 3º ano • Matemática, páginas 230–249<br>Seu progresso fica neste navegador. Faça uma pausa quando precisar.</footer></div><noscript>Ative o JavaScript do navegador para jogar este quiz.</noscript>
+<script id="math-content" type="application/json">
+{
+  "missions": [
+    {
+      "id": 1,
+      "title": "Repartir e agrupar",
+      "icon": "🍋",
+      "pages": "230–232 e 240",
+      "color": "mint",
+      "concept": "Dividir ajuda a repartir igualmente ou descobrir quantos grupos cabem em um total. Se o resto é zero, a divisão é exata. O resto deve ser menor que o divisor.",
+      "example": "23 limões, 5 por saquinho: 4 saquinhos completos e 3 limões fora. Conferimos: 4 × 5 + 3 = 23."
+    },
+    {
+      "id": 2,
+      "title": "O segredo da conta armada",
+      "icon": "🧱",
+      "pages": "233–237",
+      "color": "peach",
+      "concept": "Centenas, dezenas e unidades têm valores diferentes. Uma dezena que sobra pode virar 10 unidades. Por isso, dividir não é apenas dividir os algarismos separados.",
+      "example": "73 ÷ 3: 7 dezenas dão 2 dezenas a cada um e sobra 1 dezena. Ela vira 10 unidades; com as 3 que já havia, temos 13. Cada um ganha mais 4 e sobra 1. Resultado: 24, resto 1."
+    },
+    {
+      "id": 3,
+      "title": "Partes que fazem sentido",
+      "icon": "🍉",
+      "pages": "238–239, 245 e 247",
+      "color": "pink",
+      "concept": "Metade é dividir por 2; terça parte, por 3; quarta parte, por 4; quinta, por 5; décima, por 10. Primeiro descubra o total e sua unidade.",
+      "example": "Uma hora tem 60 minutos. A quarta parte de uma hora é 60 ÷ 4 = 15 minutos. Meia dúzia é 12 ÷ 2 = 6 unidades."
+    },
+    {
+      "id": 4,
+      "title": "Cabeça de calculista",
+      "icon": "⚡",
+      "pages": "243–246",
+      "color": "yellow",
+      "concept": "Use fatos que conhece: se 42 ÷ 6 = 7, então 420 ÷ 6 = 70. Para estimar, escolha um número próximo e fácil de dividir. Estimativa não é resposta exata.",
+      "example": "119 ÷ 3 fica perto de 120 ÷ 3 = 40. Já 119 ÷ 3 tem quociente 39 e resto 2. Outra estratégia é tirar grupos iguais: 60 → 48 → 36 → 24 → 12 → 0 são cinco grupos de 12."
+    },
+    {
+      "id": 5,
+      "title": "Detetive dos problemas",
+      "icon": "🔎",
+      "pages": "235–236 e 241–247",
+      "color": "lavender",
+      "concept": "Compreenda a pergunta. Planeje as contas. Calcule. Confira. Responda com a unidade. Às vezes é preciso somar, subtrair ou multiplicar antes de dividir.",
+      "example": "Uma camiseta de R$ 26 e uma calça de R$ 58, em 3 parcelas iguais: primeiro 26 + 58 = 84; depois 84 ÷ 3 = 28 reais por parcela."
+    },
+    {
+      "id": 6,
+      "title": "Dados, sobras e descobertas",
+      "icon": "🏆",
+      "pages": "242 e 248–249",
+      "color": "blue",
+      "concept": "A resposta depende da pergunta: caixas completamente cheias ou caixas para guardar tudo? Leia tabelas e gráficos, conte os intervalos e confira se a resposta faz sentido.",
+      "example": "25 brinquedos em caixas de até 6: ficam 4 caixas cheias e sobra 1 brinquedo. Para guardar TODOS, precisamos de 5 caixas. A última não fica cheia."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "mission": 1,
+      "page": 231,
+      "type": "number",
+      "title": "A barraca do sapo tem 23 limões. Cada saquinho leva 5. Quantos saquinhos completos ele faz e quantos limões sobram?",
+      "labels": [
+        "Saquinhos completos",
+        "Limões que sobram"
+      ],
+      "answers": [
+        4,
+        3
+      ],
+      "hint": "Procure na tabuada do 5 o maior resultado que não passe de 23.",
+      "explain": "4 × 5 = 20. De 23, tiramos 20 e sobram 3. Conferência: 4 × 5 + 3 = 23. Não cabe outro saquinho completo, pois 3 é menor que 5."
+    },
+    {
+      "id": "q2",
+      "mission": 1,
+      "page": 232,
+      "type": "number",
+      "title": "Miguel vai guardar 48 livros em caixas com 8 livros cada. Quantas caixas ficarão cheias?",
+      "labels": [
+        "Caixas cheias"
+      ],
+      "answers": [
+        6
+      ],
+      "hint": "Você procura quantos grupos de 8 cabem em 48.",
+      "explain": "48 ÷ 8 = 6 caixas. Confira: 6 × 8 = 48 livros. O resto é zero: é uma divisão exata."
+    },
+    {
+      "id": "q3",
+      "mission": 1,
+      "page": 230,
+      "type": "choice",
+      "title": "24 biscoitos serão repartidos igualmente entre 4 amigos. O que o resultado 6 representa?",
+      "options": [
+        "A quantidade de amigos",
+        "Os biscoitos que cada amigo recebe",
+        "Os biscoitos que sobram"
+      ],
+      "correct": 1,
+      "hint": "Pergunte: o total está sendo repartido entre quem?",
+      "explain": "Cada amigo recebe 6 biscoitos. Os 4 amigos recebem juntos 4 × 6 = 24. A divisão aqui descobre a quantidade em cada parte."
+    },
+    {
+      "id": "q4",
+      "mission": 1,
+      "page": 231,
+      "type": "choice",
+      "title": "O robô disse: “29 ÷ 5 dá 4 e sobra 9”. Qual é o problema?",
+      "options": [
+        "Nenhum: 4 × 5 + 9 = 29",
+        "O resto precisa ser zero sempre",
+        "Ainda dá para formar outro grupo de 5"
+      ],
+      "correct": 2,
+      "hint": "Se ainda sobram 9 objetos, cabe mais um grupo de 5?",
+      "explain": "A conferência 4 × 5 + 9 = 29 não basta! Como 9 é maior que 5, ainda cabe outro grupo. O correto é 5, resto 4: 5 × 5 + 4 = 29 e 4 < 5."
+    },
+    {
+      "id": "q5",
+      "mission": 1,
+      "page": 232,
+      "type": "number",
+      "title": "26 moedas serão divididas igualmente entre 3 sobrinhos, sem trocar nem cortar moedas. Complete.",
+      "labels": [
+        "Moedas por sobrinho",
+        "Moedas que sobram"
+      ],
+      "answers": [
+        8,
+        2
+      ],
+      "hint": "Comece com 3 × 8 e compare com o total de moedas.",
+      "explain": "3 × 8 = 24 moedas distribuídas. Sobram 26 − 24 = 2. Cada sobrinho recebe 8 moedas; as 2 restantes ficam fora da divisão."
+    },
+    {
+      "id": "q6",
+      "mission": 1,
+      "page": 240,
+      "type": "choice",
+      "title": "Caça às divisões exatas! Qual conta termina sem sobra?",
+      "options": [
+        "20 ÷ 6",
+        "36 ÷ 5",
+        "84 ÷ 4"
+      ],
+      "correct": 2,
+      "hint": "Use a multiplicação para descobrir se é possível chegar exatamente ao total.",
+      "explain": "84 ÷ 4 = 21, pois 21 × 4 = 84. Já 20 ÷ 6 tem resto 2 e 36 ÷ 5 tem resto 1. Só a terceira é exata."
+    },
+    {
+      "id": "q7",
+      "mission": 1,
+      "page": 230,
+      "type": "number",
+      "title": "Há 30 morangos para colocar em bandejas com meia dúzia em cada. Quantas bandejas completas?",
+      "labels": [
+        "Bandejas"
+      ],
+      "answers": [
+        5
+      ],
+      "hint": "Meia dúzia são 6 unidades, não 3.",
+      "explain": "Uma dúzia tem 12; meia dúzia tem 6. Então 30 ÷ 6 = 5 bandejas. Conferência: 5 × 6 = 30 morangos."
+    },
+    {
+      "id": "q8",
+      "mission": 1,
+      "page": 231,
+      "type": "choice",
+      "title": "Qual conta confere corretamente 33 ÷ 10, com quociente 3 e resto 3?",
+      "options": [
+        "3 × 10 + 3 = 33",
+        "3 + 10 + 3 = 16",
+        "33 × 10 = 330"
+      ],
+      "correct": 0,
+      "hint": "Para conferir, multiplique divisor e quociente. Depois some o resto.",
+      "explain": "A regra é: divisor × quociente + resto = dividendo. Aqui, 10 × 3 + 3 = 33. O resto 3 também é menor que o divisor 10."
+    },
+    {
+      "id": "q9",
+      "mission": 2,
+      "page": 234,
+      "type": "number",
+      "title": "73 cartas serão repartidas entre 3 crianças. Faça a conta no papel e complete.",
+      "labels": [
+        "Cartas por criança",
+        "Resto"
+      ],
+      "answers": [
+        24,
+        1
+      ],
+      "hint": "Troque a dezena que sobra por 10 unidades e junte as 3 unidades.",
+      "explain": "7 dezenas ÷ 3 dão 2 dezenas por criança e sobra 1 dezena. Com a troca, ficam 13 unidades: 4 para cada uma e sobra 1. Confira: 24 × 3 + 1 = 73."
+    },
+    {
+      "id": "q10",
+      "mission": 2,
+      "page": 237,
+      "type": "number",
+      "title": "Uma feira vai embalar 744 cajus, com 6 em cada caixa. Quantas caixas completas e qual resto?",
+      "labels": [
+        "Caixas completas",
+        "Resto"
+      ],
+      "answers": [
+        124,
+        0
+      ],
+      "hint": "Divida as centenas primeiro. A centena que sobra vira 10 dezenas.",
+      "explain": "7 centenas ÷ 6: 1 para cada grupo, sobra 1. Juntando às 4 dezenas, ficam 14 dezenas. Dividimos: 2 dezenas por grupo, sobram 2. Elas viram 20 unidades; com mais 4, ficam 24. 24 ÷ 6 = 4. São 124 caixas: 124 × 6 = 744."
+    },
+    {
+      "id": "q11",
+      "mission": 2,
+      "page": 234,
+      "type": "choice",
+      "title": "Na conta 73 ÷ 3, sobra 1 dezena depois de repartir as dezenas. Ela vira…",
+      "options": [
+        "1 unidade",
+        "10 unidades",
+        "100 unidades"
+      ],
+      "correct": 1,
+      "hint": "Uma barrinha do material dourado vale quantos cubinhos?",
+      "explain": "1 dezena vale 10 unidades. Não perdemos nem criamos objetos ao fazer a troca. Juntamos essas 10 unidades às 3 que já havia: 13 unidades."
+    },
+    {
+      "id": "q12",
+      "mission": 2,
+      "page": 236,
+      "type": "number",
+      "title": "284 copinhos de gelatina serão divididos igualmente entre 2 mesas. Quantos em cada mesa?",
+      "labels": [
+        "Copinhos por mesa"
+      ],
+      "answers": [
+        142
+      ],
+      "hint": "Reparta 2 centenas, 8 dezenas e 4 unidades entre as 2 mesas.",
+      "explain": "2 centenas ÷ 2 = 1 centena; 8 dezenas ÷ 2 = 4 dezenas; 4 unidades ÷ 2 = 2 unidades. São 142 por mesa. Confira: 142 × 2 = 284."
+    },
+    {
+      "id": "q13",
+      "mission": 2,
+      "page": 237,
+      "type": "number",
+      "title": "138 alunos formarão 3 corais iguais. Quantos alunos em cada coral?",
+      "labels": [
+        "Alunos por coral"
+      ],
+      "answers": [
+        46
+      ],
+      "hint": "Não há centenas suficientes para dar uma a cada coral. Pense em 13 dezenas.",
+      "explain": "1 centena e 3 dezenas são 13 dezenas. 13 ÷ 3 dá 4 dezenas e sobra 1 dezena. Com as 8 unidades, temos 18; 18 ÷ 3 = 6. Resultado: 46. Confira: 46 × 3 = 138."
+    },
+    {
+      "id": "q14",
+      "mission": 2,
+      "page": 237,
+      "type": "number",
+      "title": "390 adesivos serão divididos entre 3 turmas. Quantos cada turma recebe?",
+      "labels": [
+        "Adesivos por turma"
+      ],
+      "answers": [
+        130
+      ],
+      "hint": "Depois de dividir centenas e dezenas, lembre da casa das unidades.",
+      "explain": "3 centenas ÷ 3 = 1 centena. 9 dezenas ÷ 3 = 3 dezenas. Há 0 unidades. O resultado é 130, e não 13. Confira: 130 × 3 = 390."
+    },
+    {
+      "id": "q15",
+      "mission": 2,
+      "page": 235,
+      "type": "number",
+      "title": "O dragão tem 57 botões para repartir entre 4 casacos. Quantos vão em cada casaco e quantos sobram?",
+      "labels": [
+        "Botões por casaco",
+        "Resto"
+      ],
+      "answers": [
+        14,
+        1
+      ],
+      "hint": "5 dezenas repartidas por 4 deixam 1 dezena para trocar.",
+      "explain": "5 dezenas ÷ 4 dão 1 dezena e sobra 1. Ela vira 10 unidades; com 7, temos 17. 17 ÷ 4 dá 4 e sobra 1. Logo, 14 por casaco. Confira: 14 × 4 + 1 = 57."
+    },
+    {
+      "id": "q16",
+      "mission": 2,
+      "page": 238,
+      "type": "number",
+      "title": "283 sementes serão separadas em pacotes com 5. Complete sem esquecer o resto.",
+      "labels": [
+        "Pacotes completos",
+        "Resto"
+      ],
+      "answers": [
+        56,
+        3
+      ],
+      "hint": "28 dezenas ÷ 5 dão 5 dezenas e sobram 3 dezenas.",
+      "explain": "As 3 dezenas que sobram viram 30 unidades. Com mais 3, temos 33. 33 ÷ 5 dá 6 e sobra 3. São 56 pacotes completos. Confira: 56 × 5 + 3 = 283."
+    },
+    {
+      "id": "q17",
+      "mission": 3,
+      "page": 238,
+      "type": "number",
+      "title": "Miguel leu a metade de um livro de 76 páginas. Quantas páginas ele leu?",
+      "labels": [
+        "Páginas lidas"
+      ],
+      "answers": [
+        38
+      ],
+      "hint": "Metade significa repartir o total em duas partes iguais.",
+      "explain": "76 ÷ 2 = 38 páginas. Confira: 38 + 38 = 76. Metade não é tirar 2: é dividir por 2."
+    },
+    {
+      "id": "q18",
+      "mission": 3,
+      "page": 238,
+      "type": "number",
+      "title": "A terça parte dos 96 lápis da escola é azul. Quantos são azuis?",
+      "labels": [
+        "Lápis azuis"
+      ],
+      "answers": [
+        32
+      ],
+      "hint": "Terça parte é uma das 3 partes iguais do total.",
+      "explain": "96 ÷ 3 = 32 lápis azuis. Confira: 32 × 3 = 96. As três partes iguais recompõem o total."
+    },
+    {
+      "id": "q19",
+      "mission": 3,
+      "page": 238,
+      "type": "number",
+      "title": "Uma caixa tem 85 figurinhas. Miguel ganhou a quinta parte. Quantas ganhou?",
+      "labels": [
+        "Figurinhas"
+      ],
+      "answers": [
+        17
+      ],
+      "hint": "Quinta parte é dividir por 5, e não tirar 5.",
+      "explain": "85 ÷ 5 = 17 figurinhas. Confira: 17 × 5 = 85. Uma parte entre cinco partes iguais vale 17."
+    },
+    {
+      "id": "q20",
+      "mission": 3,
+      "page": 239,
+      "type": "number",
+      "title": "Uma fita mede 1 metro, ou 100 centímetros. Você usa a metade. Quantos centímetros usa?",
+      "labels": [
+        "Centímetros"
+      ],
+      "answers": [
+        50
+      ],
+      "hint": "Primeiro deixe a medida em centímetros, depois divida por 2.",
+      "explain": "1 metro tem 100 centímetros. A metade é 100 ÷ 2 = 50 centímetros. Confira: 50 + 50 = 100."
+    },
+    {
+      "id": "q21",
+      "mission": 3,
+      "page": 238,
+      "type": "number",
+      "title": "O desafio do foguete dura a décima parte de 1 minuto. Quantos segundos?",
+      "labels": [
+        "Segundos"
+      ],
+      "answers": [
+        6
+      ],
+      "hint": "Um minuto tem 60 segundos. Décima parte é dividir por 10.",
+      "explain": "60 ÷ 10 = 6 segundos. Confira: 6 × 10 = 60 segundos. A unidade da resposta é segundos."
+    },
+    {
+      "id": "q22",
+      "mission": 3,
+      "page": 239,
+      "type": "number",
+      "title": "O monstro comeu a terça parte de 2 dúzias de uvas. Quantas uvas ele comeu?",
+      "labels": [
+        "Uvas"
+      ],
+      "answers": [
+        8
+      ],
+      "hint": "Transforme 2 dúzias em unidades antes de dividir.",
+      "explain": "2 dúzias são 2 × 12 = 24 uvas. A terça parte é 24 ÷ 3 = 8 uvas. Confira: 8 × 3 = 24."
+    },
+    {
+      "id": "q23",
+      "mission": 3,
+      "page": 245,
+      "type": "number",
+      "title": "Uma letra desenhada tem 12 quadradinhos de altura e 6 de largura. Reduza TODAS essas medidas à metade.",
+      "labels": [
+        "Nova altura",
+        "Nova largura"
+      ],
+      "answers": [
+        6,
+        3
+      ],
+      "hint": "Divida cada medida por 2, uma de cada vez.",
+      "explain": "Altura: 12 ÷ 2 = 6. Largura: 6 ÷ 2 = 3. Reduzir o desenho à metade das medidas exige reduzir as duas medidas, mantendo a forma."
+    },
+    {
+      "id": "q24",
+      "mission": 3,
+      "page": 247,
+      "type": "number",
+      "title": "Uma gincana de 5 horas e 40 minutos terá 4 períodos iguais. Quantos minutos dura cada período?",
+      "labels": [
+        "Minutos por período"
+      ],
+      "answers": [
+        85
+      ],
+      "hint": "Converta as 5 horas em minutos e some os 40 antes de dividir.",
+      "explain": "5 × 60 + 40 = 340 minutos. 340 ÷ 4 = 85 minutos, ou 1 hora e 25 minutos. Confira: 85 × 4 = 340. Atenção: 5h40 não são 540 minutos!"
+    },
+    {
+      "id": "q25",
+      "mission": 4,
+      "page": 243,
+      "type": "number",
+      "title": "420 participantes formam filas de 6. Quantas filas?",
+      "labels": [
+        "Filas"
+      ],
+      "answers": [
+        70
+      ],
+      "hint": "Se 42 ÷ 6 = 7, pense em dez vezes essa quantidade.",
+      "explain": "420 ÷ 6 = 70 filas. São 42 dezenas divididas por 6: 7 dezenas. Confira: 70 × 6 = 420."
+    },
+    {
+      "id": "q26",
+      "mission": 4,
+      "page": 243,
+      "type": "number",
+      "title": "Uma fábrica distribui 5.400 peças igualmente em 6 lotes. Quantas por lote?",
+      "labels": [
+        "Peças por lote"
+      ],
+      "answers": [
+        900
+      ],
+      "hint": "54 ÷ 6 = 9. Aqui estamos dividindo 54 centenas.",
+      "explain": "5.400 ÷ 6 = 900 peças. 54 centenas ÷ 6 = 9 centenas. Confira: 900 × 6 = 5.400."
+    },
+    {
+      "id": "q27",
+      "mission": 4,
+      "page": 244,
+      "type": "number",
+      "title": "Para estimar 119 ÷ 3, use 120 no lugar de 119. Qual resultado aproximado você obtém?",
+      "labels": [
+        "Resultado aproximado"
+      ],
+      "answers": [
+        40
+      ],
+      "hint": "Calcule a divisão mais fácil: 120 ÷ 3.",
+      "explain": "120 ÷ 3 = 40. Logo, a estimativa pedida é 40. A conta original tem quociente 39 e resto 2; estimar ajuda a perceber se a resposta está perto do esperado."
+    },
+    {
+      "id": "q28",
+      "mission": 4,
+      "page": 244,
+      "type": "choice",
+      "title": "Três bolas iguais custam R$ 117. Usando R$ 120 como aproximação, quanto custariam DUAS bolas?",
+      "options": [
+        "Cerca de R$ 40",
+        "Cerca de R$ 80",
+        "Cerca de R$ 120"
+      ],
+      "correct": 1,
+      "hint": "Primeiro estime uma bola. Depois calcule duas.",
+      "explain": "120 ÷ 3 = 40 reais por bola, aproximadamente. Duas custariam cerca de 2 × 40 = 80 reais. O preço exato seria 78 reais, perto da estimativa."
+    },
+    {
+      "id": "q29",
+      "mission": 4,
+      "page": 246,
+      "type": "number",
+      "title": "Tire grupos de 12 de 60: 60 → 48 → 36 → 24 → 12 → 0. Quantos grupos foram retirados?",
+      "labels": [
+        "Grupos retirados"
+      ],
+      "answers": [
+        5
+      ],
+      "hint": "Conte as setas, não a quantidade de números escritos.",
+      "explain": "Foram 5 subtrações de 12, então 60 ÷ 12 = 5. Confira: 5 × 12 = 60. O número inicial não conta como um grupo retirado."
+    },
+    {
+      "id": "q30",
+      "mission": 4,
+      "page": 246,
+      "type": "number",
+      "title": "Uma loja tem 77 peças. Cada kit precisa de 37 peças. Quantos kits completos e qual sobra?",
+      "labels": [
+        "Kits completos",
+        "Peças que sobram"
+      ],
+      "answers": [
+        2,
+        3
+      ],
+      "hint": "Tire 37 de 77 e veja se consegue tirar 37 outra vez.",
+      "explain": "77 − 37 = 40; 40 − 37 = 3. Foram 2 retiradas, então são 2 kits e sobram 3 peças. Confira: 2 × 37 + 3 = 77."
+    },
+    {
+      "id": "q31",
+      "mission": 4,
+      "page": 245,
+      "type": "number",
+      "title": "Siga a máquina de contas: comece em 38, tire 34, multiplique por 5, some 10 e divida por 3. Onde chega?",
+      "labels": [
+        "Resultado final"
+      ],
+      "answers": [
+        10
+      ],
+      "hint": "Anote o resultado depois de cada ação, na ordem indicada.",
+      "explain": "38 − 34 = 4; 4 × 5 = 20; 20 + 10 = 30; 30 ÷ 3 = 10. Cada ação usa o resultado da anterior."
+    },
+    {
+      "id": "q32",
+      "mission": 4,
+      "page": 246,
+      "type": "create",
+      "title": "Invente uma divisão exata por 6. Escolha um total MAIOR que 80 e escreva o quociente.",
+      "labels": [
+        "Total escolhido (maior que 80)",
+        "Quociente"
+      ],
+      "hint": "Escolha um quociente e multiplique por 6 para construir o total.",
+      "explain": "Há muitas respostas! Por exemplo: 84 ÷ 6 = 14, pois 14 × 6 = 84. Seu total precisa ser maior que 80 e ser exatamente 6 vezes o quociente."
+    },
+    {
+      "id": "q33",
+      "mission": 5,
+      "page": 236,
+      "type": "number",
+      "title": "Uma calça custa R$ 58 e uma camiseta R$ 26. A compra será paga em 3 parcelas iguais, sem juros. Quanto em cada parcela?",
+      "labels": [
+        "Reais por parcela"
+      ],
+      "answers": [
+        28
+      ],
+      "hint": "Some o preço das duas peças antes de dividir.",
+      "explain": "58 + 26 = 84 reais ao todo. 84 ÷ 3 = 28 reais por parcela. Confira: 3 × 28 = 84. Dividir só o preço da calça deixaria parte da compra de fora."
+    },
+    {
+      "id": "q34",
+      "mission": 5,
+      "page": 235,
+      "type": "number",
+      "title": "Luísa tem 44 anos. Sua idade somada às idades dos 2 filhos gêmeos dá 76. Quantos anos tem cada filho?",
+      "labels": [
+        "Anos de cada filho"
+      ],
+      "answers": [
+        16
+      ],
+      "hint": "Tire a idade da mãe. O que sobra é a soma das idades dos gêmeos.",
+      "explain": "76 − 44 = 32 anos dos dois filhos juntos. Como são gêmeos, 32 ÷ 2 = 16 anos cada um. Confira: 44 + 16 + 16 = 76."
+    },
+    {
+      "id": "q35",
+      "mission": 5,
+      "page": 241,
+      "type": "number",
+      "title": "Três tortas iguais foram pagas com 2 notas de R$ 20, 4 de R$ 5 e 6 de R$ 2. Não houve troco. Quanto custou cada torta?",
+      "labels": [
+        "Reais por torta"
+      ],
+      "answers": [
+        24
+      ],
+      "hint": "Calcule o valor de cada grupo de notas; depois junte tudo.",
+      "explain": "2 × 20 = 40; 4 × 5 = 20; 6 × 2 = 12. Total: 72 reais. 72 ÷ 3 = 24 reais por torta. Confira: 24 × 3 = 72."
+    },
+    {
+      "id": "q36",
+      "mission": 5,
+      "page": 241,
+      "type": "number",
+      "title": "Há 3 caixas com 10 sabonetes e 8 caixas com 15. Todos serão reorganizados em caixas com 6. Quantas caixas novas?",
+      "labels": [
+        "Caixas novas"
+      ],
+      "answers": [
+        25
+      ],
+      "hint": "Descubra o total dos dois tipos de caixa antes de dividir.",
+      "explain": "3 × 10 = 30 e 8 × 15 = 120. Juntos são 150 sabonetes. 150 ÷ 6 = 25 caixas. Confira: 25 × 6 = 150."
+    },
+    {
+      "id": "q37",
+      "mission": 5,
+      "page": 241,
+      "type": "number",
+      "title": "Uma pulseira repete este padrão: 1 bolinha vermelha e 3 verdes. Ela tem 20 bolinhas ao todo. Quantas de cada cor?",
+      "labels": [
+        "Vermelhas",
+        "Verdes"
+      ],
+      "answers": [
+        5,
+        15
+      ],
+      "hint": "Cada repetição do padrão usa 4 bolinhas, não 3.",
+      "explain": "Cada grupo tem 1 + 3 = 4 bolinhas. 20 ÷ 4 = 5 grupos. São 5 vermelhas e 5 × 3 = 15 verdes. Confira: 5 + 15 = 20."
+    },
+    {
+      "id": "q38",
+      "mission": 5,
+      "page": 242,
+      "type": "number",
+      "title": "Do 1º ao 4º poste são 54 metros, com espaços iguais. Quantos metros há entre dois postes vizinhos?",
+      "labels": [
+        "Metros entre vizinhos"
+      ],
+      "answers": [
+        18
+      ],
+      "hint": "Desenhe quatro postes e conte os espaços entre eles.",
+      "explain": "Entre o 1º e o 4º poste há 3 espaços. 54 ÷ 3 = 18 metros por espaço. Confira: 18 + 18 + 18 = 54. Quatro postes não formam quatro intervalos.",
+      "visual": "posts"
+    },
+    {
+      "id": "q39",
+      "mission": 5,
+      "page": 247,
+      "type": "number",
+      "title": "6 cadernos iguais custam R$ 75. Quanto custam 2 desses cadernos?",
+      "labels": [
+        "Reais por 2 cadernos"
+      ],
+      "answers": [
+        25
+      ],
+      "hint": "2 cadernos são a terça parte de 6. Não é preciso achar o preço de um.",
+      "explain": "Podemos formar 3 grupos de 2 cadernos. Então cada grupo custa 75 ÷ 3 = 25 reais. Confira: 3 grupos × 25 = 75 reais."
+    },
+    {
+      "id": "q40",
+      "mission": 5,
+      "page": 238,
+      "type": "number",
+      "title": "São necessárias 18 garrafas para cada banquinho. A turma quer fazer 6 e já juntou metade do necessário. Quantas garrafas ainda faltam?",
+      "labels": [
+        "Garrafas que faltam"
+      ],
+      "answers": [
+        54
+      ],
+      "hint": "Primeiro calcule o necessário para seis banquinhos.",
+      "explain": "18 × 6 = 108 garrafas necessárias. Já juntaram metade, e falta a outra metade: 108 ÷ 2 = 54. Confira: 54 + 54 = 108."
+    },
+    {
+      "id": "q41",
+      "mission": 6,
+      "page": 248,
+      "type": "number",
+      "title": "Miguel tem 89 adesivos e cola 7 por página, começando na página 1. Complete o álbum!",
+      "labels": [
+        "Páginas completas",
+        "Adesivos que sobram",
+        "Página que recebe a sobra"
+      ],
+      "answers": [
+        12,
+        5,
+        13
+      ],
+      "hint": "Faça 89 ÷ 7. A sobra vai na página seguinte à última completa.",
+      "explain": "12 × 7 = 84. Sobram 89 − 84 = 5 adesivos. As páginas 1 a 12 ficam completas; os 5 restantes vão para a página 13. Confira: 12 × 7 + 5 = 89."
+    },
+    {
+      "id": "q42",
+      "mission": 6,
+      "page": 249,
+      "type": "number",
+      "title": "O gráfico tem 6 partes iguais: amarelo ocupa 2 e vale 136 pontos; verde ocupa 1; laranja ocupa 3. Quantos pontos têm verde e laranja?",
+      "labels": [
+        "Pontos do verde",
+        "Pontos do laranja"
+      ],
+      "answers": [
+        68,
+        204
+      ],
+      "hint": "Descubra quanto vale UMA parte do gráfico.",
+      "explain": "Duas partes valem 136, então uma vale 136 ÷ 2 = 68 pontos. Verde: 1 × 68 = 68. Laranja: 3 × 68 = 204. O total é 6 × 68 = 408 pontos.",
+      "visual": "chart"
+    },
+    {
+      "id": "q43",
+      "mission": 6,
+      "page": 248,
+      "type": "number",
+      "title": "A floricultura tem 485 rosas e 319 cravos. Fará arranjos com 6 flores cada, usando todas as flores. Quantos arranjos?",
+      "labels": [
+        "Arranjos"
+      ],
+      "answers": [
+        134
+      ],
+      "hint": "Some as duas quantidades de flores e depois divida.",
+      "explain": "485 + 319 = 804 flores. 804 ÷ 6 = 134 arranjos. Confira: 134 × 6 = 804. Se dividíssemos só as rosas, os cravos ficariam esquecidos."
+    },
+    {
+      "id": "q44",
+      "mission": 6,
+      "page": 249,
+      "type": "choice",
+      "title": "A nota mostra R$ 64, R$ 24 e R$ 52. O total impresso é R$ 150. O que você descobriu?",
+      "options": [
+        "O total correto é R$ 140",
+        "O total correto é R$ 130",
+        "O total de R$ 150 está certo"
+      ],
+      "correct": 0,
+      "hint": "Some as três linhas antes de confiar no total impresso.",
+      "explain": "64 + 24 = 88; 88 + 52 = 140 reais. A nota cobrou 10 reais a mais: 150 − 140 = 10. Conferir os dados ajuda a encontrar erros."
+    },
+    {
+      "id": "q45",
+      "mission": 6,
+      "page": 248,
+      "type": "choice",
+      "title": "25 brinquedos precisam ser guardados em caixas com capacidade para 6. Quantas caixas são necessárias para guardar TODOS?",
+      "options": [
+        "4 caixas",
+        "5 caixas",
+        "6 caixas"
+      ],
+      "correct": 1,
+      "hint": "Depois de encher 4 caixas, ainda existe um brinquedo fora.",
+      "explain": "25 ÷ 6 tem quociente 4 e resto 1. São 4 caixas cheias, mas o brinquedo que sobra também precisa de caixa. Por isso, precisamos de 5 caixas ao todo."
+    },
+    {
+      "id": "q46",
+      "mission": 6,
+      "page": 242,
+      "type": "number",
+      "title": "Entre dois postes vizinhos há 18 metros. Em uma fila de 7 postes, quantos metros há do primeiro ao último?",
+      "labels": [
+        "Metros no total"
+      ],
+      "answers": [
+        108
+      ],
+      "hint": "Sete postes formam seis intervalos. Faça um desenho para conferir.",
+      "explain": "Há 7 − 1 = 6 intervalos. Cada um mede 18 metros: 6 × 18 = 108 metros. Confira: 108 ÷ 6 = 18."
+    },
+    {
+      "id": "q47",
+      "mission": 6,
+      "page": 247,
+      "type": "number",
+      "title": "15 notas somam R$ 210. Três irmãos recebem a mesma quantidade de notas e o mesmo valor. Quantas notas e quantos reais por irmão?",
+      "labels": [
+        "Notas por irmão",
+        "Reais por irmão"
+      ],
+      "answers": [
+        5,
+        70
+      ],
+      "hint": "Quantidade de notas e valor em reais são duas informações diferentes.",
+      "explain": "15 ÷ 3 = 5 notas para cada um. 210 ÷ 3 = 70 reais para cada um. Confira: 5 × 3 = 15 notas e 70 × 3 = 210 reais. Ter o mesmo número de notas, sozinho, não garante o mesmo valor."
+    },
+    {
+      "id": "q48",
+      "mission": 6,
+      "page": 239,
+      "type": "choice",
+      "title": "O robô escreveu “meia dúzia = 3” e “600 ÷ 3 = 300”. Qual par corrige as duas contas?",
+      "options": [
+        "6 e 200",
+        "3 e 200",
+        "6 e 300"
+      ],
+      "correct": 0,
+      "hint": "Dúzia vale 12. Para conferir a segunda conta, multiplique a resposta por 3.",
+      "explain": "Meia dúzia é 12 ÷ 2 = 6. E 600 ÷ 3 = 200, pois 200 × 3 = 600. Se fossem 300, teríamos 900, que passa do total. Encontrar o erro também é aprender!"
+    }
+  ],
+  "quick": [
+    "q1",
+    "q4",
+    "q9",
+    "q10",
+    "q21",
+    "q24",
+    "q27",
+    "q30",
+    "q33",
+    "q38",
+    "q41",
+    "q42"
+  ]
+}</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('math-content').textContent);
+const KEY='miguel-matematica-v1', main=document.getElementById('main');
+const byId=Object.fromEntries(DATA.questions.map(q=>[q.id,q]));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let state={version:1,active:null,profiles:[]},storageOK=true;
+const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+const strings=x=>Array.isArray(x)&&x.every(v=>typeof v==='string');
+function grade(q,values){
+ if(!strings(values))return false;
+ if(q.type==='choice')return values.length===1&&values[0]===String(q.correct);
+ if(values.length!==q.labels.length||!values.every(v=>/^\d+$/.test(v.trim())&&Number.isSafeInteger(Number(v))))return false;
+ const nums=values.map(Number);
+ if(q.type==='create')return nums[0]>80&&nums[0]===6*nums[1];
+ return nums.every((n,i)=>n===q.answers[i]);
+}
+function validState(s){
+ if(!object(s)||s.version!==1||!Array.isArray(s.profiles)||!(s.active===null||typeof s.active==='string'))return false;
+ const seen=new Set(),names=new Set();
+ for(const p of s.profiles){
+  if(!object(p)||typeof p.id!=='string'||seen.has(p.id)||typeof p.name!=='string'||!p.name.trim()||p.name.length>24||names.has(p.name.toLocaleLowerCase('pt-BR'))||!object(p.answers)||!strings(p.cross)||p.cross.length!==9||!p.cross.every(v=>/^\d?$/.test(v))||typeof p.story!=='string')return false;
+  seen.add(p.id);names.add(p.name.toLocaleLowerCase('pt-BR'));
+  for(const [id,a]of Object.entries(p.answers))if(!byId[id]||!object(a)||typeof a.mastered!=='boolean'||typeof a.lastCorrect!=='boolean'||typeof a.reason!=='string')return false;
+  if(p.session!==null){const t=p.session;
+   if(!object(t)||!strings(t.ids)||!t.ids.length||new Set(t.ids).size!==t.ids.length||!t.ids.every(id=>byId[id])||!Number.isInteger(t.index)||t.index<0||t.index>t.ids.length||!strings(t.values)||typeof t.reason!=='string'||typeof t.checked!=='boolean'||typeof t.correct!=='boolean'||!Array.isArray(t.results)||t.results.some(v=>typeof v!=='boolean')||t.results.length!==t.index+(t.checked?1:0)||typeof t.title!=='string')return false;
+   if(t.index===t.ids.length&&t.checked)return false;
+   if(t.checked&&(grade(byId[t.ids[t.index]],t.values)!==t.correct||t.results.at(-1)!==t.correct))return false;
+  }
+ }
+ return s.active===null||seen.has(s.active);
+}
+function warn(message){document.getElementById('notice').textContent=message}
+try{const raw=localStorage.getItem(KEY);if(raw!==null){const candidate=JSON.parse(raw);if(!validState(candidate))throw new Error('invalid');state=candidate}}
+catch{storageOK=false;warn('Os dados salvos não puderam ser lidos. Você pode jogar, mas esta sessão não será salva. Os dados anteriores foram preservados.')}
+function save(){if(storageOK)try{localStorage.setItem(KEY,JSON.stringify(state))}catch{storageOK=false;warn('O navegador não permitiu salvar. Você pode continuar jogando, mas o avanço desta sessão ficará só até fechar a página.')}}
+function player(){return state.profiles.find(p=>p.id===state.active)}
+function stars(p=player()){return Object.values(p.answers).filter(a=>a.mastered).length}
+function shell(html){main.innerHTML=html;updateHeader();main.focus();window.scrollTo(0,0)}
+function updateHeader(){const p=player(),s=p?stars(p):0;document.getElementById('profile').textContent=p?`${p.name} · ★ ${s} ${s===1?'estrela':'estrelas'}`:'';document.getElementById('switch').hidden=!p}
+function feedback(text,error=false){const e=document.getElementById('feedback');e.className='feedback'+(error?' error':'');e.textContent=text}
+function button(text,fn,cls=''){return `<button ${cls?`class="${cls}"`:''} onclick="${fn}">${text}</button>`}
+function back(){return button('← Voltar ao mapa','map()','back')}
+function login(){
+ shell(`<section class="panel login"><div class="eyebrow">Uma aventura com números</div><h1>Missão Divisão <span aria-hidden="true">🚀</span></h1><p>Um problema por vez. Você pensa, experimenta e descobre os segredos da divisão!</p><form id="login" class="stack"><label>Seu nome ou apelido<input id="name" maxlength="24" required autocomplete="nickname" placeholder="Como podemos chamar você?"></label><button>Vamos nessa!</button></form><div id="feedback" role="status"></div><p class="note">Sem cadastro. Seu nome e seu progresso ficam neste navegador.</p>${state.profiles.length?'<p>Já jogou por aqui?</p><div class="saved-names">'+state.profiles.map((p,i)=>button(esc(p.name),`selectPlayer(${i})`,'secondary')).join('')+'</div>':''}</section>`);
+ document.getElementById('login').onsubmit=e=>{e.preventDefault();const name=document.getElementById('name').value.trim();if(!name){feedback('Digite seu nome ou apelido para começar.',true);return}let p=state.profiles.find(p=>p.name.toLocaleLowerCase('pt-BR')===name.toLocaleLowerCase('pt-BR'));if(!p){p={id:crypto.randomUUID(),name,answers:{},session:null,cross:Array(9).fill(''),story:''};state.profiles.push(p)}state.active=p.id;save();map()};
+}
+function selectPlayer(i){state.active=state.profiles[i].id;save();map()}
+document.getElementById('switch').onclick=()=>{state.active=null;save();login()};
+const art=`<svg class="hero-art" viewBox="0 0 320 250" aria-hidden="true"><ellipse cx="163" cy="135" rx="140" ry="107" fill="#efe7d5"/><g transform="rotate(-8 160 130)"><rect x="82" y="40" width="156" height="180" rx="28" fill="#87bda6" stroke="#235f50" stroke-width="3"/><rect x="99" y="58" width="122" height="48" rx="11" fill="#fff8df"/><text x="160" y="93" text-anchor="middle" font-size="30" font-family="sans-serif" fill="#235f50">÷ = ✦</text><rect x="103" y="121" width="31" height="31" rx="8" fill="#fff8df"/><rect x="145" y="121" width="31" height="31" rx="8" fill="#fff8df"/><rect x="187" y="121" width="31" height="31" rx="8" fill="#efb565"/><circle cx="132" cy="176" r="5" fill="#235f50"/><circle cx="188" cy="176" r="5" fill="#235f50"/><path d="M147 186q13 16 27 0" fill="none" stroke="#235f50" stroke-width="4" stroke-linecap="round"/></g><path d="M45 45l6 15 16 2-13 10 4 16-13-9-14 9 4-16-13-10 17-2z" fill="#edb54a"/><circle cx="267" cy="187" r="20" fill="#eabbb4"/><path d="M256 187h22m-11-11v22" stroke="#934d45" stroke-width="3"/></svg>`;
+function map(){const p=player();if(!p)return login();const pending=DATA.questions.filter(q=>p.answers[q.id]?.lastCorrect===false);shell(`<section class="hero"><div><div class="eyebrow">Matemática · 3º ano · páginas 230–249</div><h1>Dividir para<br><span style="color:var(--green)">descobrir!</span></h1><p>Oi, ${esc(p.name)}! O robô Quociente precisa da sua ajuda. Vamos repartir ideias e multiplicar descobertas?</p><span class="pill">48 desafios</span><span class="pill">No seu ritmo</span><span class="pill">Sem corrida contra o relógio</span></div>${art}</section><section class="panel welcome"><div><div class="eyebrow">Comece por aqui</div><h2>Revisão de hoje</h2><p>12 desafios para visitar todos os assuntos.<br>Separe papel e lápis. Reserve cerca de 15–20 minutos.</p></div>${button('Começar revisão de hoje',"start('quick')")}</section>${p.session&&p.session.index<p.session.ids.length?`<div class="panel"><strong>Você tem uma rodada em andamento.</strong><p>${esc(p.session.title)} · desafio ${p.session.index+1} de ${p.session.ids.length}</p>${button('Continuar de onde parei','question()')}</div>`:''}${pending.length?`<div class="panel"><strong>Errar deu uma pista do que treinar!</strong><p>Vamos olhar novamente os desafios que merecem atenção.</p>${button(`Rever ${pending.length} desafio${pending.length===1?'':'s'}`,"start('review')",'secondary')}</div>`:''}<div class="section-title"><h2>Seu mapa de descobertas</h2><span class="note">Cada trilha: 8 desafios · cerca de 15–20 min</span></div><div class="grid">${DATA.missions.map(m=>{const count=DATA.questions.filter(q=>q.mission===m.id&&p.answers[q.id]?.mastered).length;return `<article class="tile ${m.color}"><span class="icon" aria-hidden="true">${m.icon}</span><div class="progressline"><span>Trilha ${m.id}</span><span>${count}/8 descobertas</span></div><progress max="8" value="${count}" aria-label="Progresso em ${m.title}"></progress><h3>${m.title}</h3><p>Páginas ${m.pages}</p>${count===8?'<span class="badge">★ Trilha conquistada</span>':''}${button('Treinar '+m.title,`lesson(${m.id})`)}</article>`}).join('')}</div><div class="section-title"><h2>Aprenda experimentando</h2></div><div class="grid tools"><article class="tile"><h3>🧱 Oficina da divisão</h3><p>Veja as trocas de centenas, dezenas e unidades e acompanhe a conta.</p>${button('Abrir oficina da divisão','workshop()')}</article><article class="tile"><h3>🔢 Números cruzados</h3><p>As respostas se encontram! Confira linhas e colunas do mesmo tabuleiro.</p>${button('Jogar números cruzados','crossword()')}</article><article class="tile"><h3>✏️ Agora você é o autor</h3><p>Invente um problema, explique a solução e compare com um exemplo.</p>${button('Criar meu problema','author()')}</article></div>`)}
+function lesson(id){const m=DATA.missions.find(m=>m.id===id);shell(`<div class="session">${back()}<section class="panel"><div class="eyebrow">Trilha ${id} · páginas ${m.pages}</div><h1>${m.icon} ${m.title}</h1><p>${m.concept}</p><div class="feedback"><strong>Veja um exemplo</strong><p>${m.example}</p></div><p class="note">Leia, imagine a situação e use papel e lápis. Você pode abrir uma dica durante cada desafio.</p>${button('Iniciar trilha',`start(${id})`)}</section></div>`)}
+function start(mode){const p=player();let ids,title;if(mode==='quick'){ids=DATA.quick;title='Revisão de hoje'}else if(mode==='review'){ids=DATA.questions.filter(q=>p.answers[q.id]?.lastCorrect===false).map(q=>q.id);title='Rever e descobrir'}else{ids=DATA.questions.filter(q=>q.mission===mode).map(q=>q.id);title=DATA.missions.find(m=>m.id===mode).title}if(!ids.length)return map();p.session={ids:[...ids],title,index:0,values:[],reason:'',checked:false,correct:false,results:[]};save();question()}
+function visual(kind){if(kind==='posts')return `<svg class="chart" viewBox="0 0 370 85" role="img" aria-label="Quatro postes separados por três intervalos iguais"><path d="M30 25h310" stroke="#a5b6a2" stroke-width="3"/><path d="M30 10v40m103-40v40m104-40v40m103-40v40" stroke="#775d38" stroke-width="7"/><text x="185" y="78" text-anchor="middle" fill="#283d3c">1º ───── 2º ───── 3º ───── 4º</text></svg>`;if(kind==='chart')return `<svg class="chart" viewBox="0 0 370 200" role="img" aria-label="Gráfico circular de seis partes iguais: laranja três partes, amarelo duas e verde uma"><path d="M100 100L100 20A80 80 0 1 1 100 180Z" fill="#ec9951" stroke="#fff" stroke-width="2"/><path d="M100 100L100 180A80 80 0 0 1 30.72 60Z" fill="#f0d665" stroke="#fff" stroke-width="2"/><path d="M100 100L30.72 60A80 80 0 0 1 100 20Z" fill="#6baf87" stroke="#fff" stroke-width="2"/><path d="M100 100l69.28-40m-69.28 40l69.28 40m-69.28-40l-69.28 40" stroke="#fff" stroke-width="2"/><g fill="#283d3c" font-size="15"><text x="195" y="60">Laranja: 3 partes</text><text x="195" y="100">Amarelo: 2 partes</text><text x="195" y="122">136 pontos</text><text x="195" y="160">Verde: 1 parte</text></g></svg>`;return ''}
+function question(){const t=player().session;if(!t)return map();if(t.index===t.ids.length)return result();const q=byId[t.ids[t.index]];shell(`<div class="session">${back()}<div class="progressline"><span>${esc(t.title)}</span><span>Desafio ${t.index+1} de ${t.ids.length}</span></div><progress max="${t.ids.length}" value="${t.index}" aria-label="Progresso da rodada"></progress><section class="panel"><div class="eyebrow">${DATA.missions[q.mission-1].icon} Pense, resolva, confira · p. ${q.page}</div><h1>${q.title}</h1>${visual(q.visual)}<form id="answer">${q.type==='choice'?`<fieldset><legend>Escolha uma resposta</legend>${q.options.map((o,i)=>`<label class="option"><input type="radio" name="choice" value="${i}" ${t.values[0]===String(i)?'checked':''} ${t.checked?'disabled':''}><span>${o}</span></label>`).join('')}</fieldset>`:`<div class="fields">${q.labels.map((l,i)=>`<label>${l}<input id="value${i}" data-answer inputmode="numeric" autocomplete="off" value="${esc(t.values[i]||'')}" ${t.checked?'disabled':''}></label>`).join('')}</div><p class="note">Escreva só números inteiros, sem ponto de milhar. Exemplo: 1200.</p>`}<details ${t.checked?'':'id="hint"'}><summary>Uma pista para pensar</summary><p>${q.hint}</p></details><label>Como você pensou?<textarea id="reason" maxlength="2000" placeholder="Conte sua ideia ou registre a conta (opcional)." ${t.checked?'disabled':''}>${esc(t.reason)}</textarea></label><p class="note">Seu raciocínio fica guardado para comparar com a explicação. O texto livre não recebe correção automática.</p>${t.checked?'':'<button type="submit">Conferir resposta</button>'}</form><div id="feedback" tabindex="-1" class="feedback${t.checked&&!t.correct?' error':''}" role="status">${t.checked?answerExplanation(q,t.correct):''}</div>${t.checked?`<div class="actions">${button(t.index===t.ids.length-1?'Ver resultado':'Próximo desafio','next()')}</div>`:''}</section></div>`);
+ const form=document.getElementById('answer');form.oninput=()=>{if(t.checked)return;t.values=readValues(q);t.reason=document.getElementById('reason').value;save()};form.onsubmit=e=>{e.preventDefault();if(t.checked)return;t.values=readValues(q);t.reason=document.getElementById('reason').value;const required=q.type==='choice'?1:q.labels.length;if(t.values.length!==required||t.values.some(v=>!v.trim())){feedback('Preencha a resposta antes de conferir.',true);return}if(q.type!=='choice'&&!t.values.every(v=>/^\d+$/.test(v.trim())&&Number.isSafeInteger(Number(v)))){feedback('Use apenas números inteiros, sem sinal, letras ou ponto de milhar.',true);return}t.correct=grade(q,t.values);t.checked=true;t.results.push(t.correct);const old=player().answers[q.id];player().answers[q.id]={mastered:!!old?.mastered||t.correct,lastCorrect:t.correct,reason:t.reason};save();question();document.getElementById('feedback').focus();document.getElementById('feedback').scrollIntoView({block:'nearest'})};
+}
+function readValues(q){return q.type==='choice'?[...document.querySelectorAll('[name=choice]:checked')].map(e=>e.value):[...document.querySelectorAll('[data-answer]')].map(e=>e.value)}
+function answerExplanation(q,correct){return `<h2>${correct?'★ Boa descoberta!':'Vamos entender juntos'}</h2><p>${q.explain}</p>${q.type==='create'&&correct?`<p><strong>Sua criação: ${Number(player().session.values[0])} ÷ 6 = ${Number(player().session.values[1])}.</strong> Ela atende às duas condições!</p>`:''}<p class="note" style="margin-top:12px">${correct?'Leia a explicação e compare com seu jeito de pensar.':'Este desafio vai para a sua revisão. Você pode tentar novamente depois de entender a explicação.'}</p>`}
+function next(){const t=player().session;if(!t?.checked)return;t.index++;t.values=[];t.reason='';t.checked=false;t.correct=false;save();question()}
+function result(){const t=player().session;const right=t.results.filter(Boolean).length;shell(`<div class="session"><section class="panel finish"><div style="font-size:60px" aria-hidden="true">${right===t.ids.length?'🏆':'🌱'}</div><h1>Mais uma descoberta!</h1><p>Você acertou <strong>${right} de ${t.ids.length}</strong> desafios nesta rodada.</p><div class="stats"><div class="stat"><strong>${stars()}</strong>estrelas conquistadas</div><div class="stat"><strong>${t.ids.length-right}</strong>para rever com calma</div></div><p>Explique uma descoberta em voz alta. Depois, faça uma pausa ou volte ao mapa para continuar.</p><p class="note">Cada desafio dá uma estrela na primeira vez em que você acerta. Repetir ajuda a aprender e não duplica estrelas.</p>${button('Voltar ao mapa','map()')}</section></div>`)}
+function blocks(n){return `<div class="blocks" aria-hidden="true">${'<span class="block hundred"></span>'.repeat(Math.floor(n/100))}${'<span class="block ten"></span>'.repeat(Math.floor(n%100/10))}${'<span class="block one"></span>'.repeat(n%10)}</div>`}
+function workshop(){shell(`<div class="session">${back()}<section class="panel"><div class="eyebrow">Veja o que a conta está fazendo</div><h1>Oficina da divisão 🧱</h1><p>Cada placa vale 100, cada barrinha vale 10 e cada cubinho vale 1. Observe as trocas antes de tentar uma conta no papel.</p><label>Conta para explorar<select id="workshopChoice"><option value="73,3">73 ÷ 3 · com troca e resto</option><option value="69,3">69 ÷ 3 · sem troca</option><option value="744,6">744 ÷ 6 · centenas e dezenas</option><option value="138,3">138 ÷ 3 · começar pelas dezenas</option><option value="390,3">390 ÷ 3 · zero no quociente</option></select></label><div id="workshop" aria-live="polite"></div></section></div>`);document.getElementById('workshopChoice').onchange=drawWorkshop;drawWorkshop()}
+function longDivision(n,d){
+ const digits=String(n).split('').map(Number),width=digits.length+2,q=Math.floor(n/d);let rem=0,started=false,rows=[String(n).padStart(width)+' │ '+d];
+ for(let i=0;i<digits.length;i++){
+  const part=rem*10+digits[i],digit=Math.floor(part/d),end=i+3;
+  if(digit||started||i===digits.length-1){
+   if(started)rows.push(String(part).padStart(end));
+   rows.push(('−'+digit*d).padStart(end).padEnd(width)+(started?'':' ├────'));
+   rows.push('─'.repeat(String(part).length).padStart(end).padEnd(width)+(started?'':' │ '+q));started=true;
+  }
+  rem=part%d;
+ }
+ rows.push(String(rem).padStart(width));return rows.join('\n');
+}
+function drawWorkshop(){const [n,d]=document.getElementById('workshopChoice').value.split(',').map(Number),q=Math.floor(n/d),r=n%d;let rem=0,lines=[];const digits=String(n).split('').map(Number),units=['unidades','dezenas','centenas'];const amount=(v,p)=>`${v} ${v===1?units[p].slice(0,-1):units[p]}`;digits.forEach((digit,i)=>{const power=digits.length-i-1,part=rem*10+digit,z=Math.floor(part/d),left=part%d;let text=rem?`${rem===1?'A':'As'} ${amount(rem,power+1)} que ${rem===1?'sobrou vira':'sobraram viram'} ${amount(rem*10,power)}. Juntando ${digit}, temos ${amount(part,power)}. `:`Temos ${amount(part,power)}. `;text+=`Dividindo por ${d}, cada grupo recebe ${amount(z,power)}. O resto nesta etapa é ${left}.`;lines.push(text);rem=left});document.getElementById('workshop').innerHTML=`<div class="equation">${n} ÷ ${d} → ${q}, resto ${r}</div><h2>Repartindo em ${d} grupos</h2>${Array.from({length:d},(_,i)=>`<div class="groupbox"><strong>Grupo ${i+1}: ${q}</strong>${blocks(q)}</div>`).join('')}<p><strong>Fora dos grupos: ${r} unidade${r===1?'':'s'}.</strong></p>${blocks(r)}<h2>Entenda as trocas</h2><ol class="steps">${lines.map(l=>`<li>${l}</li>`).join('')}</ol><h2>Registro da conta</h2><pre class="longdiv" aria-label="Conta de ${n} dividido por ${d}, quociente ${q} e resto ${r}">${longDivision(n,d)}</pre><div class="feedback"><strong>Conferência: ${q} × ${d} + ${r} = ${n}.</strong><p>${r===0?'Nada sobrou: a divisão é exata.':`O resto ${r} é menor que ${d}, então não dá para repartir mais uma unidade para cada grupo.`}</p></div>`}
+function crossword(){const p=player();shell(`<div class="session">${back()}<section class="panel"><div class="eyebrow">Inspirado na página 248</div><h1>Números cruzados 🔢</h1><p>Resolva as contas. Escreva um algarismo por quadrinho, da esquerda para a direita. As colunas também precisam formar as respostas!</p><div class="clues"><div><h3>Linhas →</h3><p>1. 247 + 591<br>2. 563 − 58<br>3. 2 × 300</p></div><div><h3>Colunas ↓</h3><p>1. 806 + 50<br>2. 900 ÷ 3<br>3. 5 × 170</p></div></div><form id="crossForm"><div class="cross">${p.cross.map((v,i)=>`<input aria-label="Linha ${Math.floor(i/3)+1}, coluna ${i%3+1}" inputmode="numeric" pattern="[0-9]" maxlength="1" required value="${esc(v)}">`).join('')}</div><button>Conferir cruzados</button></form><div id="feedback" role="status"></div><p class="note">Esta oficina é livre: não muda suas estrelas dos desafios.</p></section></div>`);const form=document.getElementById('crossForm');form.oninput=()=>{p.cross=[...form.querySelectorAll('input')].map(i=>i.value.replace(/\D/g,'').slice(0,1));form.querySelectorAll('input').forEach((e,i)=>e.value=p.cross[i]);save()};form.onsubmit=e=>{e.preventDefault();if(p.cross.join('')==='838505600')feedback('Você conferiu as seis contas! Linhas: 838, 505 e 600. Colunas: 856, 300 e 850. Observe o zero de 300: 900 ÷ 3 não é 30.');else feedback('Ainda há um encontro para ajustar. Confira cada linha e depois leia as colunas de cima para baixo. Dica: 900 ÷ 3 = 300, pois 300 × 3 = 900.',true)}}
+function author(){shell(`<div class="session">${back()}<section class="panel"><div class="eyebrow">Sua ideia vira um problema</div><h1>Agora você é o autor ✏️</h1><p>Invente uma situação para <strong>35 ÷ 4</strong>. Conte o que será repartido, escreva uma pergunta e explique a resposta com o resto.</p><label>Meu problema e minha solução<textarea id="story" maxlength="3000" placeholder="Era uma vez…">${esc(player().story)}</textarea></label><p class="note">Seu texto é salvo. Esta atividade não recebe correção automática nem estrelas.</p><details><summary>Comparar com um exemplo e conferir meu texto</summary><p>“Quatro amigos vão repartir 35 figurinhas igualmente, sem cortar nenhuma. Quantas cada um recebe e quantas sobram?”</p><p>Cada amigo recebe 8 e sobram 3, pois 4 × 8 + 3 = 35. O resto é menor que 4.</p><p>Meu texto diz qual é o total? Deixa claro que são partes iguais? Pergunta algo que a divisão responde? Minha resposta tem unidade e explica a sobra?</p><p>Seu problema pode ser diferente e também estar correto. Leia para um adulto ou colega e compare as ideias.</p></details></section></div>`);document.getElementById('story').oninput=e=>{player().story=e.target.value;save()}}
+if(player()){if(player().session)question();else map()}else login();
+</script></body></html>
