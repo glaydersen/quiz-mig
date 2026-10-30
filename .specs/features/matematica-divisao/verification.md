@@ -31,3 +31,8 @@ Adequação: testes ligados ao escopo; sem mocks de resultados nem testes antigo
 
 ## Etapa 2 — home
 Gate `node tests/matematica-home.mjs`: PASS. AC6: tests/matematica-home.mjs:5 `assert.match(current,/href="quiz-matematica-2026.10.30.html"/)`; :6 `assert.equal(archived.length,7)` e `assert.ok(archived.includes('quiz-geografia-2026.10.02.html'))`; :7 testa todos os HTML locais. Mapeamento reverso: todas as assertivas deste arquivo correspondem à integração da home em AC6. Os testes históricos de Geografia permanecem intactos; CHECK_HOME de geografia.mjs é uma fotografia da entrega anterior, portanto a home atual é verificada pela suíte de Matemática.
+
+## Ajuste encontrado na verificação independente
+AC4: registros concluídos guardavam apenas acerto/domínio/raciocínio; acrescentado `values` para preservar a resposta após avançar. Validação estrutural confere os valores e a correção. Gate `node tests/matematica.mjs && node tests/matematica-edge.mjs`: PASS.
+
+Cobertura adicional (mapeamento direto e reverso): tests/matematica-edge.mjs:5 verifica nome vazio e `maxlength='24'` (AC4); :7–10 rejeitam negativos, vazios, campos ausentes, texto parcial e criações fora das condições, mas aceitam resto zero (AC2); :13 verifica `assert.deepEqual(stored.profiles[0].answers.q1,{mastered:true,lastCorrect:true,reason:'23 menos 20 sobra 3',values:['4','3']})` e índice 1 (AC4); :14 confere preservação de sessão estruturalmente inválida (AC4). Todos necessários para cláusulas explícitas da especificação. Testes anteriores mantidos, sem enfraquecer ou substituir assertivas.
